@@ -1,0 +1,14 @@
+
+STOP
+WAITUNTIL {ROUNDINPROGRESS}
+WAITSEC 3 
+STOPIF {CLASSD} < 2
+
+# Grab one random respawned player and save them as a variable, "INTRUDER".
+PLAYERVAR SAVE {INTRUDER} {CLASSD} 1
+
+# Turn them into a CI
+SETROLE {INTRUDER} 6
+
+# Delete the variable so it isn't accidentally re-used later on.
+PLAYERVAR DELETE {INTRUDER}

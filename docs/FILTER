@@ -1,0 +1,40 @@
+!-- HELPRESPONSE
+Auto Generated At: 25 January 2024 13:50
+Expires: 25 January 2024 13:55
+
+=== VARIABLE ===
+Name: {FILTER}
+Description: Filters a player variable by a certain type.
+Stores Players: YES
+Usage: {FILTER:NAME:TYPE:INPUT}
+Variable Type: Numerical
+
+Arguments:
+
+<name>
+  Required: YES
+  Type: Player Variable
+  The name of the variable to filter.
+
+<type>
+  Required: YES
+  Type: String (Message/Text)
+  The mode to use to filter.
+
+<input>
+  Required: YES
+  Type: Any Type
+  What to use as the filter (RoleType, ZoneType, etc)
+
+The following options are valid mode options:
+- USERID
+- PLAYERID
+- ROLE
+- TEAM
+- ROOM
+- ZONE
+- INV
+- HELDITEM
+- GROUP
+- ISSTAFF
+Invalid options will result in a script error.

@@ -1,0 +1,35 @@
+!-- HELPRESPONSE
+Auto Generated At: 10 January 2024 19:10
+Expires: 10 January 2024 19:15
+
++ SIZE +
+Sets all players to the given size.
+Action type: Player
+
+Usage: SIZE <PLAYERS> <SIZE X> <SIZE Y> <SIZE Z> [MAX]
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to rescale.
+
+<size X>
+  Required: YES
+  Type: Float (Number)
+  The X size to put on the player.
+
+<size Y>
+  Required: YES
+  Type: Float (Number)
+  The Y size to put on the player.
+
+<size Z>
+  Required: YES
+  Type: Float (Number)
+  The Z size to put on the player.
+
+[max]
+  Required: NO
+  Type: Int (Whole Number)
+  The maximum amount of players to rescale (default: unlimited).

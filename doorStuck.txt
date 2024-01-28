@@ -1,0 +1,84 @@
+#entre 6s et 16s
+SAVE temps 5 + {CHANCE10}
+SAVE random {CHANCE100}
+SAVE random10 {CHANCE10}
+
+GOTOIF normal ({!WARHEADDETONATED})
+
+#nuke
+WAITUNTIL {!CASSIESPEAKING}
+SILENTCASSIE Door system malfunction in Surface Zone in 5 seconds | Door system malfunction in <color=#F00>Surface</color> zone in 5 seconds
+WAITUNTIL {!CASSIESPEAKING}
+WAITSEC 5
+SAVE zone LightContainment
+GOTO Lock
+
+normal:
+GOTOIF entrance ({RAND} = 0)
+
+#lightHeavy
+GOTOIF heavy ({RAND} = 0)
+GOTOIF heavy ({!DECONTAMINATED})
+
+#light
+WAITUNTIL {!CASSIESPEAKING}
+SILENTCASSIE Door system malfunction in Light Containment Zone in 5 seconds | Door system malfunction in <color=#1BBB9B>Light</color> containment zone in 5 seconds
+WAITUNTIL {!CASSIESPEAKING}
+WAITSEC 5
+SAVE zone LightContainment
+GOTO Lock
+
+heavy:
+WAITUNTIL {!CASSIESPEAKING}
+SILENTCASSIE Door system malfunction in Heavy Containment Zone in 5 seconds | Door system malfunction in <color=#431919>Heavy</color> zone in 5 seconds
+WAITUNTIL {!CASSIESPEAKING}
+WAITSEC 5
+
+SAVE zone HeavyContainment
+GOTO Lock 
+
+entrance:
+WAITUNTIL {!CASSIESPEAKING}
+SILENTCASSIE Door system malfunction in Entrance zone in 5 seconds | Door system malfunction in <color=#ffff00>Entrance</color> zone in 5 seconds
+WAITUNTIL {!CASSIESPEAKING}
+WAITSEC 5
+SAVE zone Entrance
+GOTO Lock
+
+all:
+WAITUNTIL {!CASSIESPEAKING}
+SILENTCASSIE Door system malfunction in All of the facility in 5 seconds | <color=#0a0a0a>Door system</color> malfunction in <color=#ff0000>All</color> of the facility in 5 seconds
+WAITUNTIL {!CASSIESPEAKING}
+WAITSEC 5
+SAVE zone *
+GOTO Lock
+
+Lock:
+WAITSEC 5
+#Ferme lock ouvre unlock
+DOOR CLOSE {zone}
+DOOR LOCK {zone}
+WAITSEC {temps}
+DOOR OPEN {zone}
+WAITSEC {temps}
+DOOR UNLOCK {zone}
+
+GOTOIF ouvert fermer ({random10} < 6)
+
+
+ouvert:
+DOOR OPEN {zone}
+PRINT ouvert apres
+PRINT {random10}
+GOTO Fin
+
+fermer:
+DOOR CLOSE {zone}
+PRINT fermer apres
+PRINT {random10}
+GOTO Fin
+
+
+Fin:
+DELVARIABLE  {zone}
+STOP

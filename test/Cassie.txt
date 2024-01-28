@@ -1,0 +1,2 @@
+#CASSIE RED | <color=#FF0000> c le rouj</color> 
+CASSIE gray | <color=#0a0a0a>c le gry</color> aaaaaaaaaaaaaa

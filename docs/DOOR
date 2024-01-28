@@ -1,0 +1,20 @@
+!-- HELPRESPONSE
+Auto Generated At: 15 January 2024 15:17
+Expires: 15 January 2024 15:22
+
++ DOOR +
+Controls map doors.
+Action type: Map
+
+Usage: DOOR <MODE> <DOORS>
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The mode (LOCK, UNLOCK, OPEN, CLOSE, DESTROY).
+
+<doors>
+  Required: YES
+  Type: Door List
+  The doors to affect.

@@ -1,0 +1,2 @@
+PLAYERVAR SAVE test_test {PLAYERS} 1
+PRINT {SsHOW:test_test:USERID}

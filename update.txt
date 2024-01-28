@@ -1,0 +1,25 @@
+!-- LOOP
+#debug
+#WAITSEC 5
+
+Debut:
+
+WAITSEC 300 - 2 * {CHANCE100}
+
+
+SAVE update_aleatoire100 ({CHANCE}*100)
+SAVE update_condi {ROUNDMINUTES}*2
+PRINT aleatoire100 = {update_aleatoire100}
+PRINT condi = {update_condi}
+
+GOTOIF blackout doorStuck ({update_aleatoire100} < {update_condi} OR {WARHEADDETONATED} OR {WARHEADCOUNTING} )
+
+blackout:
+PRINT update_blackout
+EXECUTESCRIPT blackout
+GOTO Debut
+
+doorStuck:
+PRINT update_doorStuck
+EXECUTESCRIPT doorStuck
+GOTO Debut

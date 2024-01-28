@@ -1,0 +1,16 @@
+
+GOTOIF boom ({CHANCE20} = 2)
+
+PRINT classD_normal
+DOOR OPEN PrisonDoor
+GOTO Fin
+
+boom:
+PRINT classD_boom
+DOOR DESTROY PrisonDoor
+GOTO Fin
+
+Fin:
+STOP
+
+

@@ -1,0 +1,13 @@
+!-- ADMINEVENT
+#vie du scp x3
+
+#vitesse du scp x1.5
+
+#clear inv de tout le monde
+
+#give 2 jailbirds à tout le monde
+
+#lumière en rouge
+
+#Cassie
+

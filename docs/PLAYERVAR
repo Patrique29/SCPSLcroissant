@@ -1,0 +1,30 @@
+!-- HELPRESPONSE
+Auto Generated At: 12 January 2024 06:44
+Expires: 12 January 2024 06:49
+
++ PLAYERVAR +
+Allows manipulation of player variables.
+Action type: Variable
+
+Usage: PLAYERVAR <MODE> <VARIABLENAME> <PLAYERS> [MAX]
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The action to perform (SAVE/DELETE/ADD/REMOVE).
+
+<variableName>
+  Required: YES
+  Type: String (Message/Text)
+  The name of the variable.
+
+<players>
+  Required: YES
+  Type: Player List
+  The players. Not required if mode is 'DELETE', but required otherwise.
+
+[max]
+  Required: NO
+  Type: Int (Whole Number)
+  The maximum amount of players to save/add/remove. No effect if mode is 'DELETE'. Math and variables are supported. (default: unlimited).

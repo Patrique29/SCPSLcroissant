@@ -1,0 +1,35 @@
+!-- HELPRESPONSE
+Auto Generated At: 28 January 2024 12:16
+Expires: 28 January 2024 12:21
+
++ ADVCASSIE +
+Makes a cassie announcement with specified advanced settings.
+Action type: C.A.S.S.I.E
+Usage: ADVCASSIE <PLAYERS> <DELAY> <ISLOUD> <HASSUBTITLES> <MESSAGE>
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to play the CASSIE announcement for.
+
+<delay>
+  Required: YES
+  Type: Boolean (TRUE/FALSE)
+  If FALSE, CASSIE will make the broadcast as soon as possible. The subtitles may be out of sync as result.
+
+<isLoud>
+  Required: YES
+  Type: Boolean (TRUE/FALSE)
+  If FALSE, CASSIE will not make the jingle sound.
+
+<hasSubtitles>
+  Required: YES
+  Type: Boolean (TRUE/FALSE)
+  If FALSE, subtitles will not be shown.
+
+<message>
+  Required: YES
+  Type: String (Message/Text)
+  The message. Separate message with a | to specify a caption. Variables are supported.

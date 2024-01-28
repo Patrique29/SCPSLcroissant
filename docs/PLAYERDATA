@@ -1,0 +1,30 @@
+!-- HELPRESPONSE
+Auto Generated At: 05 January 2024 18:12
+Expires: 05 January 2024 18:17
+
++ PLAYERDATA +
+Allows manipulation of variables specific to players.
+Action type: Variable
+
+Usage: PLAYERDATA <MODE> <PLAYERS> <KEYNAME> [VALUE]
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The mode to use (GET/SET/DELETE).
+
+<players>
+  Required: YES
+  Type: Player List
+  The players to affect.
+
+<keyName>
+  Required: YES
+  Type: String (Message/Text)
+  The name of the key.
+
+[value]
+  Required: NO
+  Type: String (Message/Text)
+  GET - The variable to create containing the value of the accessed key, SET - The new value of the key, DELETE - N/A

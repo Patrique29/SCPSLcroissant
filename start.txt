@@ -1,0 +1,11 @@
+!-- AUTORUN
+#i'm too lazy to put all of this in autostart
+WAITUNTIL {ROUNDSTARTED}
+
+EXECUTESCRIPT update
+EXECUTESCRIPT SCPNOE
+EXECUTESCRIPT classD
+EXECUTESCRIPT marauderPerChaosRespawn
+EXECUTESCRIPT noeQuiKaboom
+EXECUTESCRIPT peanutLockdown
+EXECUTESCRIPT autonuke
