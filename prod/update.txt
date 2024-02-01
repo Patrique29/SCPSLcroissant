@@ -12,7 +12,7 @@ SAVE update_condi {ROUNDMINUTES}*2
 PRINT aleatoire100 = {update_aleatoire100}
 PRINT condi = {update_condi}
 
-GOTOIF blackout doorStuck ({update_aleatoire100} < {update_condi} OR {WARHEADDETONATED} OR {WARHEADCOUNTING} )
+GOTOIF doorStuck ({update_aleatoire100} > {update_condi})
 
 blackout:
 PRINT update_blackout
@@ -20,6 +20,7 @@ EXECUTESCRIPT blackout
 GOTO Debut
 
 doorStuck:
+GOTOIF blackout ({WARHEADDETONATED} OR {WARHEADCOUNTING})
 PRINT update_doorStuck
 EXECUTESCRIPT doorStuck
 GOTO Debut

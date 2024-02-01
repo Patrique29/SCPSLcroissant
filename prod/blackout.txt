@@ -6,27 +6,27 @@ SAVE Aleatoire10 {CHANCE10}
 
 
 
-GOTOIF nuke normal ({WARHEADDETONATED})
+GOTOIF normal ({!WARHEADDETONATED})
 
-nuke:
+#nuke:
 LOG Surface
 WAITUNTIL {!CASSIESPEAKING}
-SILENTCASSIE Warning Failure Of All Lights In Surface in 5 seconds | <color=#FF0000>Warning</color> Failure Of All Lights In <color=#FF0000>Surface</color> Of The Facility in 5 seconds
+SILENTCASSIE Warning Failure Of All Lights In Surface in 5 seconds | <color=#FF0000>Warning</color> Failure Of All Lights In <color=#FF0000>Surface</color> in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
-WAITSEC 5
+WAITSEC 10
 LIGHTSOFF Surface {Temps}
 GOTO Fin
 
 normal:
 #Blackout tout 1/20 
-GOTOIF tout testpastout ({Aleatoire20} = 5)
+GOTOIF testpastout ({Aleatoire20} > 0)
 
-tout:
+#tout:
 LOG All
 WAITUNTIL {!CASSIESPEAKING}
 SILENTCASSIE Warning Failure Of All Lights In All Of The Facility in 5 seconds | <color=#FF0000>Warning</color> Failure Of All Lights In <color=#FF0000>All</color> Of The Facility in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
-WAITSEC 5
+WAITSEC 10
 LIGHTSOFF * {Temps}
 GOTO Fin
 
@@ -43,14 +43,15 @@ GOTO Fin
 
 
 testpastout: 
-GOTOIF lightHeavy entrance ({Aleatoire3} > 2 OR {Aleatoire3} = 2) 
+GOTOIF entrance ({Aleatoire3} = 1) 
 
-lightHeavy:
+#lightHeavy:
 #1/2 de prend light ou heavy
-GOTOIF light heavy ({Aleatoire10} < 6 AND {!DECONTAMINATED})
+GOTOIF heavy ({RAND} = 1)
+GOTOIF heavy ({DECONTAMINATED})
 
 #1/3 LightC
-light:
+#light:
 LOG Light
 WAITUNTIL {!CASSIESPEAKING}
 SILENTCASSIE Warning Failure Of All Lights In Light Containment Zone in 5 seconds | <color=#ff6700>Warning</color> Failure Of All Lights In <color=#1BBB9B>Light</color> Containment Zone in 5 seconds

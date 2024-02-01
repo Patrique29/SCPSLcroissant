@@ -14,11 +14,11 @@ SAVE zone LightContainment
 GOTO Lock
 
 normal:
-GOTOIF entrance ({RAND} = 0)
+GOTOIF entrance ({CHANCE100} < 50)
 
 #lightHeavy
-GOTOIF heavy ({RAND} = 0)
-GOTOIF heavy ({!DECONTAMINATED})
+GOTOIF heavy ({CHANCE100} <50)
+GOTOIF heavy ({DECONTAMINATED})
 
 #light
 WAITUNTIL {!CASSIESPEAKING}
@@ -63,10 +63,10 @@ DOOR OPEN {zone}
 WAITSEC {temps}
 DOOR UNLOCK {zone}
 
-GOTOIF ouvert fermer ({random10} < 6)
+GOTOIF fermer ({random10} >= 6)
 
 
-ouvert:
+#ouvert:
 DOOR OPEN {zone}
 PRINT ouvert apres
 PRINT {random10}

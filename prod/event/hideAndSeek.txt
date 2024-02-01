@@ -6,6 +6,7 @@ PLAYERVAR SAVE {seeker} {PLAYERS} 1
 
 SETROLE {seeker} Tutorial
 
+
 PLAYERVAR DELETE {seeker}
 
 
