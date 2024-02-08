@@ -1,0 +1,15 @@
+!-- HELPRESPONSE
+Auto Generated At: 01 February 2024 15:54
+Expires: 01 February 2024 15:59
+
++ DELVARIABLE +
+Deletes a previously-defined variable.
+Action type: Variable
+Usage: DELVARIABLE <VARIABLENAME>
+
+
+Arguments:
+<variableName>
+  Required: YES
+  Type: Condition Variable
+  The name of the variable.

@@ -1,0 +1,25 @@
+!-- HELPRESPONSE
+Auto Generated At: 01 February 2024 14:26
+Expires: 01 February 2024 14:31
+
++ RESKIN +
+Sets the appearance of all players to the given role. Does NOT actually change their role -- only their appearance!
+Action type: Player
+Usage: RESKIN <PLAYERS> <ROLE> [TARGETPLAYERS]
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to set the role as.
+
+<role>
+  Required: YES
+  Type: RoleTypeId (ID / Number)
+  The role to set the appearance of all the players as.
+
+[targetPlayers]
+  Required: NO
+  Type: Player List
+  The players that will see reskin taking place. Do not provide this variable for all players to see the reskin.

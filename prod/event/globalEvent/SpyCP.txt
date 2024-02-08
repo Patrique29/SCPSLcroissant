@@ -1,0 +1,171 @@
+!-- LOOP
+##the one with the reskin
+##1 savant qui sait en quoi est déguisé le(s) SCP(s) (si il meurt il est perdu)
+
+
+PLAYERVAR SAVE {SpyCP_savant} {HUMANS} 1
+CUSTOMINFO SET {SpyCP_savant} Savant
+
+
+
+
+SAVE testReskin_rand {CHANCE20}
+PRINT testReskin_rand = {testReskin_rand}
+PLAYERVAR SAVE {reskined} {SCPS} 1
+
+
+GOTOIF peanut ({testReskin_rand} = 1)
+GOTOIF classd ({testReskin_rand} = 2)
+GOTOIF papy ({testReskin_rand} = 3)
+GOTOIF specialist ({testReskin_rand} = 4)
+GOTOIF doc ({testReskin_rand} = 5)
+GOTOIF science ({testReskin_rand} = 6)
+GOTOIF cons ({testReskin_rand} = 7)
+GOTOIF shy ({testReskin_rand} = 8)
+GOTOIF zomb ({testReskin_rand} = 9)
+GOTOIF sergant ({testReskin_rand} = 10)
+GOTOIF captain ({testReskin_rand} = 11)
+GOTOIF private ({testReskin_rand} = 12)
+GOTOIF guard ({testReskin_rand} = 13)
+GOTOIF chien ({testReskin_rand} = 14)
+GOTOIF rifle ({testReskin_rand} = 15)
+GOTOIF skeleton ({testReskin_rand} = 16)
+GOTOIF marauder ({testReskin_rand} = 17)
+GOTOIF repressor ({testReskin_rand} = 18)
+GOTOIF tuto ({testReskin_rand} >= 19)
+
+STOP
+
+peanut:
+SAVE reskin 0
+RESKIN {SCPS} 0
+BROADCASTPLAYER {}
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-173</color>
+SAVE {testReskin_skin} 1 7 3
+STOP
+
+classd:
+SAVE reskin 1
+RESKIN {SCPS} 1
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#FF8E00>Class-D</color>
+SAVE {testReskin_skin} ClassD
+STOP
+
+papy:
+SAVE reskin 3
+RESKIN {SCPS} 3
+SAVE {testReskin_skin} 1 0 6
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-106</color>
+STOP
+
+specialist:
+SAVE reskin 4
+RESKIN {SCPS} 4
+SAVE {testReskin_skin} M T F
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#0096FF>NTF-Specialist</color>
+STOP
+
+doc:
+SAVE reskin 5
+RESKIN {SCPS} 5
+SAVE {testReskin_skin} 0 4 9
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-049</color>
+STOP
+
+science:
+SAVE reskin 6
+RESKIN {SCPS} 6
+SAVE {testReskin_skin} scientist
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#FFFF7C>Scientifique</color>
+STOP
+
+cons:
+RESKIN {SCPS} 8
+SAVE reskin 8
+SAVE {testReskin_skin} chaos
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#008F1E>C.I. Conscript</color>
+STOP
+
+shy:
+RESKIN {SCPS} 9
+SAVE reskin 9
+SAVE {testReskin_skin} 0 9 6
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-096</color>
+STOP
+
+zomb:
+SAVE reskin 10
+RESKIN {SCPS} 10
+SAVE {testReskin_skin} 0 4 9 2
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-049-2</color>
+STOP
+
+sergant:
+RESKIN {SCPS} 11
+SAVE {testReskin_skin} M T F
+SAVE reskin 11
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#0096FF>NTF-Sergeant</color>
+STOP
+
+captain:
+RESKIN {SCPS} 12
+SAVE reskin 12
+SAVE {testReskin_skin} M T F
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#003ECA>NTF-Captain</color>
+STOP
+
+private:
+SAVE reskin 13
+RESKIN {SCPS} 13
+SAVE {testReskin_skin} M T F
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#6FC3FF>NTF-Private</color>
+STOP
+
+guard:
+RESKIN {SCPS} 15
+SAVE reskin 15
+SAVE {testReskin_skin} guard
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#5B6370>Garde du Site</color>
+STOP
+
+chien:
+SAVE reskin 16
+RESKIN {SCPS} 16
+SAVE {testReskin_skin} 9 3 9
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-939</color>
+STOP
+
+rifle:
+SAVE reskin 18
+RESKIN {SCPS} 18
+SAVE {testReskin_skin} chaos
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#008F1E>C.I. Rifleman</color>
+STOP
+
+skeleton:
+RESKIN {SCPS} 23
+SAVE reskin 23
+SAVE {testReskin_skin} 3 1 1 4
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-3114</color>
+STOP
+
+marauder:
+RESKIN {SCPS} 19
+SAVE reskin 19
+SAVE {testReskin_skin} chaos
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#0A7D34>C.I. Marauder</color>
+STOP
+
+repressor:
+RESKIN {SCPS} 20
+SAVE reskin 20
+SAVE {testReskin_skin} chaos
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#006728>C.I. Repressor</color>
+STOP
+
+tuto:
+RESKIN {SCPS} 14
+SAVE reskin 14
+SAVE {testReskin_skin} T U T O
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à un <color=#FC00AB>Tutorial</color>
+STOP

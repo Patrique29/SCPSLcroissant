@@ -1,0 +1,20 @@
+!-- HELPRESPONSE
+Auto Generated At: 06 February 2024 17:14
+Expires: 06 February 2024 17:19
+
++ MAXHP +
+Set the Maximum HP of the targeted players.
+Action type: Health
+Usage: MAXHP <PLAYERS> <MAXHEALTH>
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to affect.
+
+<maxhealth>
+  Required: YES
+  Type: Float (Number)
+  The amount of max health to set the player to. Variables ARE supported.

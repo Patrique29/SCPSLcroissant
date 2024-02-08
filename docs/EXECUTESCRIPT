@@ -1,0 +1,15 @@
+!-- HELPRESPONSE
+Auto Generated At: 12 January 2024 15:51
+Expires: 12 January 2024 15:56
+
++ EXECUTESCRIPT +
+Executes a different script.
+Action type: Miscellaneous
+
+Usage: EXECUTESCRIPT <SCRIPTNAME>
+
+Arguments:
+<scriptName>
+  Required: YES
+  Type: String (Message/Text)
+  The name of the script.

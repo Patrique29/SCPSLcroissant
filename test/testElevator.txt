@@ -1,0 +1,19 @@
+!-- LOOP
+
+WAITSEC {RAND:60:300}
+
+GOTOIF deconta ({DECONTAMINATED})
+#light not decontaminated
+ELEVATOR SEND *
+GOTO Fin
+
+deconta:
+ELEVATOR SEND GateA
+ELEVATOR SEND GateB
+ELEVATOR SEND Nuke
+ELEVATOR SEND Scp049
+
+
+Fin:
+
+STOP

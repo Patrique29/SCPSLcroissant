@@ -1,0 +1,45 @@
+DOOR CLOSE Scp173NewGate
+DOOR LOCK Scp173NewGate
+WAITUNTIL {ROUNDSTARTED}
+WAITSEC 5
+GOTOIF noPeanut peanut {SCP173} = 0
+STOPIF {SCP173} = 0
+ 
+
+noPeanut:
+PRINT y'a pas de peanut
+SAVE tempsLockdown 0 
+GOTO Lockdown
+
+#8< -- 0s
+#7 -- 15s
+#6 -- 30s
+# ....
+#2 -- 90s
+#1 -- 105s disable 
+#0 -- 120s disable
+peanut:
+PRINT y'a un peanut
+SAVE {tempsLockdown} 120-({PLAYERS}*15)
+GOTOIF negatif positif ({PLAYERS} < 2)
+
+negatif:
+PRINT negatif
+SAVE {tempsLockdown} 0
+GOTO Lockdown
+
+positif:
+PRINT positif
+SAVE {tempsLockdown} 120-({PLAYERS}*15)
+GOTO Lockdown
+
+
+Lockdown:
+WAITSEC {tempsLockdown}
+DOOR UNLOCK Scp173NewGate
+DOOR OPEN Scp173NewGate
+GOTO Fin
+
+Fin:
+
+STOP

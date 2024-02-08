@@ -1,0 +1,42 @@
+!-- HELPRESPONSE
+Auto Generated At: 06 February 2024 16:59
+Expires: 06 February 2024 17:04
+
++ RADIORANGE +
+Modifies radio range settings.
+Action type: Player
+Usage: RADIORANGE <MODE> <PLAYERS> <RANGE>
+
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The mode to run. Valid options: SET, LOCK
+
+<players>
+  Required: YES
+  Type: Player List
+  The players to change the radio settings of.
+
+<range>
+  Required: YES
+  Type: RadioRange
+  The new radio range. Must be: Short, Medium, Long, or Ultra
+
+Examples:
+
+=== Case 1 ===
+Locks all Class-D to only be able to use Short range. Does not affect players that spawn after the command is executed.
+
+```
+RADIORANGE LOCK {CLASSD} Short
+```
+
+=== Case 2 ===
+Set all guard radios to be Ultra by default. Does not affect players that spawn after the command is executed.
+
+```
+RADIORANGE SET {GUARDS} Ultra
+```
+

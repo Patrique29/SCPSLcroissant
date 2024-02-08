@@ -1,0 +1,25 @@
+!-- HELPRESPONSE
+Auto Generated At: 06 February 2024 17:02
+Expires: 06 February 2024 17:07
+
++ CUSTOMINFO +
+Sets/clears the custom info of the targeted player(s).
+Action type: Player
+Usage: CUSTOMINFO <MODE> <PLAYERS> [TEXT]
+
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The mode (SET, CLEAR).
+
+<players>
+  Required: YES
+  Type: Player List
+  The players to affect.
+
+[text]
+  Required: NO
+  Type: String (Message/Text)
+  The text to set custom info to. Only used if mode is SET.

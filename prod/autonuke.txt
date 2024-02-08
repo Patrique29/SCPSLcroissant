@@ -1,0 +1,5 @@
+WAITUNTIL {ROUNDMINUTES} > 25.0
+WAITUNTIL {!WARHEADCOUNTING}
+STOPIF {WARHEADDETONATED}
+WAITUNTIL {!CASSIESPEAKING}
+CASSIE Warning automatic warhead will detonate in 5 minutes | Warning automatic warhead will detonate in <color=#FF0000>5</color> minutes

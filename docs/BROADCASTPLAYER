@@ -1,0 +1,25 @@
+!-- HELPRESPONSE
+Auto Generated At: 01 February 2024 14:50
+Expires: 01 February 2024 14:55
+
++ BROADCASTPLAYER +
+Broadcasts a message to specific player(s).
+Action type: Broadcast
+Usage: BROADCASTPLAYER <PLAYERS> <DURATION> <MESSAGE>
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to show. Variables are supported.
+
+<duration>
+  Required: YES
+  Type: Float (Number)
+  The duration of the message. Variables are supported.
+
+<message>
+  Required: YES
+  Type: String (Message/Text)
+  The message. Variables are supported.

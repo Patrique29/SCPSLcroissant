@@ -1,0 +1,3 @@
+!--DISABLED
+##Ultra Sensitive Dog
+##Can detect event in the facility (914,Nuke armed..)

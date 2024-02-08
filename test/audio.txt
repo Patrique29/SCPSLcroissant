@@ -1,0 +1,9 @@
+
+
+Start:
+WAITUNTIL {WARHEADCOUNTING}
+WAITUNTIL {!WARHEADCOUNTING}
+STOPIF {WARHEADDETONATED}
+
+COMMAND /au play 50 /home/grosserv/.config/EXILED/Plugins/audio/noeQuiJoui.ogg
+GOTO Start

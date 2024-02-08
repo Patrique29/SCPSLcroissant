@@ -1,0 +1,47 @@
+!-- HELPRESPONSE
+Auto Generated At: 25 January 2024 14:04
+Expires: 25 January 2024 14:09
+
+=== VARIABLE ===
+Name: {SHOW}
+Description: Reveal certain properties about the players in a player variable.
+Stores Players: NO
+Usage: {SHOW:NAME:SELECTOR}
+Variable Type: String (Text)
+
+Arguments:
+
+<name>
+  Required: YES
+  Type: Player Variable
+  The name of the player variable to show.
+
+[selector]
+  Required: NO
+  Type: String (Message/Text)
+  The type to show. Defaults to "NAME".
+
+This variable is designed to only be used with a player variable containing one player. However, it CAN be used with multiple players, and will list the display in the form of a comma-separated list.
+Do not use this variable for using player variables in commands. Use the 'C' variable for this.
+The following options are valid selector options:
+- NAME
+- DISPLAYNAME / DPNAME
+- USERID
+- PLAYERID
+- ROLE
+- TEAM
+- ROOM
+- ZONE
+- HP / HEALTH
+- INVCOUNT
+- INV
+- HELDITEM
+- GOD
+- POS
+- POSX
+- POSY
+- POSZ
+- TIER
+- GROUP
+- CUFFED
+Invalid options will default to the 'NAME' selector.
