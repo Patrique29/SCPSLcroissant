@@ -49,7 +49,7 @@ GOTOIF entrance ({Aleatoire3} = 1)
 
 #lightHeavy:
 #1/2 de prend light ou heavy
-GOTOIF heavy ({CHANCE50} < 50)
+GOTOIF heavy ({CHANCE100} < 50 )
 GOTOIF heavy ({DECONTAMINATED})
 
 #1/3 LightC

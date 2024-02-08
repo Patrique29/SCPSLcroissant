@@ -1,12 +1,5 @@
 !-- LOOP
 ##the one with the reskin
-##1 savant qui sait en quoi est déguisé le(s) SCP(s) (si il meurt il est perdu)
-
-
-PLAYERVAR SAVE {SpyCP_savant} {HUMANS} 1
-CUSTOMINFO SET {SpyCP_savant} Savant
-
-
 
 
 SAVE testReskin_rand {CHANCE20}
@@ -39,7 +32,6 @@ STOP
 peanut:
 SAVE reskin 0
 RESKIN {SCPS} 0
-BROADCASTPLAYER {}
 BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-173</color>
 SAVE {testReskin_skin} 1 7 3
 STOP

@@ -7,39 +7,41 @@ SAVE gateStuck_Temps 5 + {CHANCE10}
 SAVE gateStuck_Interval 60 + 3*{CHANCE20}
 LOG gateStuck_Temps={gateStuck_Temps}
 LOG gateStuck_Interval={gateStuck_Interval}
+STOPIF 
 
 
 WAITSEC {gateStuck_Interval}
-
-GOTOIF tout ({CHANCE100} <= 80)
-GOTOIF gateB ({CHANCE100} <= 50)
 WAITUNTIL {!CASSIESPEAKING}
+GOTOIF tout ({CHANCE100} <= 50)
+GOTOIF gateB ({CHANCE100} <= 50)
 
 
 
-#10%
+
+#25%
 #GateA:
-SILENTCASSIE Warning Failure Of Gate A in {gateStuck_Temps} seconds| <color=#FF0000>Warning</color> Failure Of All High level access door in 5 seconds
-WAITSEC {gateStuck_Temps}
+SILENTCASSIE Warning Failure Of Gate A in {gateStuck_Temps} seconds| <color=#FF0000>Warning</color> Failure Of Gate A in {gateStuck_Temps} seconds
+WAITSEC 5+{gateStuck_Temps}
 DOOR LOCK GateA
 DOOR OPEN GateA
 DOOR UNLOCK GateA
 GOTO Fin
 
 
-#10%
-GateB:
-SILENTCASSIE Warning Failure Of Gate B in 10 seconds| <color=#FF0000>Warning</color> Failure Of All High level access door in 5 seconds
+#25%
+gateB:
+SILENTCASSIE Warning Failure Of Gate B in {gateStuck_Temps} seconds| <color=#FF0000>Warning</color> Failure Of Gate B in {gateStuck_Temps} seconds
+WAITSEC 5+{gateStuck_Temps}
 DOOR LOCK GateB
 DOOR OPEN GateB
 DOOR UNLOCK GateB
 GOTO Fin
 
 
-#80%
+#50%
 tout:
-SILENTCASSIE Warning Failure Of All Entrance Gate in 10 seconds| <color=#FF0000>Warning</color> Failure Of All High level access door in 5 seconds
-WAITUNTIL {!CASSIESPEAKING}
+SILENTCASSIE Warning Failure Of All Entrance Gate in 10 seconds| <color=#FF0000>Warning</color> Failure Of All Entrance Gates in 5 seconds
+WAITSEC 5+{gateStuck_Temps}
 DOOR LOCK GateA
 DOOR LOCK GateB
 DOOR OPEN GateA
