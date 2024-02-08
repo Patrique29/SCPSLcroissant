@@ -1,0 +1,18 @@
+!-- HELPRESPONSE
+Auto Generated At: 01 February 2024 15:37
+Expires: 01 February 2024 15:42
+
+=== VARIABLE ===
+Name: {ISRUNNING}
+Description: Whether or not a specific script is running.
+Stores Players: NO
+Usage: {ISRUNNING:SCRIPTNAME}
+Variable Type: Boolean (true/false)
+
+Arguments:
+
+<scriptName>
+  Required: YES
+  Type: String (Message/Text)
+  The name of the script.
+

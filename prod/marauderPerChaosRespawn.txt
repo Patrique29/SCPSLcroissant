@@ -1,6 +1,7 @@
 # Wait for a Chaos respawn wave.
 WAITUNTIL {WAVERESPAWNING}
 PRINT marauderPerChaosRespawn_{LASTRESPAWNTEAM}
+LOG marauderPerChaosRespawn_{LASTRESPAWNTEAM}
 
 STOPIF {LASTRESPAWNTEAM} = NineTailedFox
 

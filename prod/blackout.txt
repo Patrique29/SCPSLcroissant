@@ -1,16 +1,17 @@
-SAVE Temps 30 + (3 * {CHANCE20})
-SAVE Aleatoire100 {CHANCE100}
+SAVE Temps 30 + {CHANCE20}
+SAVE Aleatoire100 {CHANCE50}
 SAVE Aleatoire20 {CHANCE20}
 SAVE Aleatoire3 {CHANCE3}
-SAVE Aleatoire10 {CHANCE10}
+SAVE Aleatoire10 {CHANCE5}
 
 
 
 GOTOIF normal ({!WARHEADDETONATED})
 
 #nuke:
-LOG Surface
+LOG blackout_surface
 WAITUNTIL {!CASSIESPEAKING}
+
 SILENTCASSIE Warning Failure Of All Lights In Surface in 5 seconds | <color=#FF0000>Warning</color> Failure Of All Lights In <color=#FF0000>Surface</color> in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 10
@@ -24,6 +25,7 @@ GOTOIF testpastout ({Aleatoire20} > 0)
 #tout:
 LOG All
 WAITUNTIL {!CASSIESPEAKING}
+
 SILENTCASSIE Warning Failure Of All Lights In All Of The Facility in 5 seconds | <color=#FF0000>Warning</color> Failure Of All Lights In <color=#FF0000>All</color> Of The Facility in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 10
@@ -47,13 +49,14 @@ GOTOIF entrance ({Aleatoire3} = 1)
 
 #lightHeavy:
 #1/2 de prend light ou heavy
-GOTOIF heavy ({RAND} = 1)
+GOTOIF heavy ({CHANCE50} < 50)
 GOTOIF heavy ({DECONTAMINATED})
 
 #1/3 LightC
 #light:
 LOG Light
 WAITUNTIL {!CASSIESPEAKING}
+
 SILENTCASSIE Warning Failure Of All Lights In Light Containment Zone in 5 seconds | <color=#ff6700>Warning</color> Failure Of All Lights In <color=#1BBB9B>Light</color> Containment Zone in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 5
@@ -72,7 +75,7 @@ GOTO Fin
 
 #1/3 Entrance
 entrance:
-LOG Entrance
+LOG blackout_entrance
 WAITUNTIL {!CASSIESPEAKING}
 SILENTCASSIE Warning Failure Of All Lights In Entrance Zone in 5 seconds | <color=#ff6700>Warning</color> Failure Of All Lights In <color=#FFFF00>Entrance</color> Zone in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}

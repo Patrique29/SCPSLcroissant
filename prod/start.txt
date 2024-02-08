@@ -9,3 +9,4 @@ EXECUTESCRIPT marauderPerChaosRespawn
 EXECUTESCRIPT noeQuiKaboom
 EXECUTESCRIPT peanutLockdown
 EXECUTESCRIPT autonuke
+EXECUTESCRIPT conscientElevator

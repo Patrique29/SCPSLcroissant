@@ -1,0 +1,57 @@
+!-- LOOP
+## 
+
+#6s à 15s
+SAVE gateStuck_Temps 5 + {CHANCE10}
+#63s à 120s
+SAVE gateStuck_Interval 60 + 3*{CHANCE20}
+LOG gateStuck_Temps={gateStuck_Temps}
+LOG gateStuck_Interval={gateStuck_Interval}
+
+
+WAITSEC {gateStuck_Interval}
+
+GOTOIF tout ({CHANCE100} <= 80)
+GOTOIF gateB ({CHANCE100} <= 50)
+WAITUNTIL {!CASSIESPEAKING}
+
+
+
+#10%
+#GateA:
+SILENTCASSIE Warning Failure Of Gate A in {gateStuck_Temps} seconds| <color=#FF0000>Warning</color> Failure Of All High level access door in 5 seconds
+WAITSEC {gateStuck_Temps}
+DOOR LOCK GateA
+DOOR OPEN GateA
+DOOR UNLOCK GateA
+GOTO Fin
+
+
+#10%
+GateB:
+SILENTCASSIE Warning Failure Of Gate B in 10 seconds| <color=#FF0000>Warning</color> Failure Of All High level access door in 5 seconds
+DOOR LOCK GateB
+DOOR OPEN GateB
+DOOR UNLOCK GateB
+GOTO Fin
+
+
+#80%
+tout:
+SILENTCASSIE Warning Failure Of All Entrance Gate in 10 seconds| <color=#FF0000>Warning</color> Failure Of All High level access door in 5 seconds
+WAITUNTIL {!CASSIESPEAKING}
+DOOR LOCK GateA
+DOOR LOCK GateB
+DOOR OPEN GateA
+DOOR OPEN GateB
+DOOR UNLOCK GateA
+DOOR UNLOCK GateB
+
+
+GOTO Fin
+
+
+
+Fin:
+
+STOP
