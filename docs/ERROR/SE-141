@@ -1,0 +1,8 @@
+!-- HELPRESPONSE
+Auto Generated At: 12 February 2024 06:56
+Expires: 12 February 2024 07:01
+
+=== ERROR CODE: SE-141 ===
+ID: 141
+Ran into an error while running '{0}' action (please report to developer)
+This error occurs when there was an unexpected error in an action. Please report this error in the Scripted Events Discord server.

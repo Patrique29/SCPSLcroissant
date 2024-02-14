@@ -1,4 +1,4 @@
-SAVE Temps 30 + {CHANCE20}
+SAVE blackout_temps 30 + {CHANCE20}
 SAVE Aleatoire100 {CHANCE50}
 SAVE Aleatoire20 {CHANCE20}
 SAVE Aleatoire3 {CHANCE3}
@@ -11,11 +11,10 @@ GOTOIF normal ({!WARHEADDETONATED})
 #nuke:
 LOG blackout_surface
 WAITUNTIL {!CASSIESPEAKING}
-
 SILENTCASSIE Warning Failure Of All Lights In Surface in 5 seconds | <color=#FF0000>Warning</color> Failure Of All Lights In <color=#FF0000>Surface</color> in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 10
-LIGHTSOFF Surface {Temps}
+LIGHTSOFF Surface {blackout_temps}
 GOTO Fin
 
 normal:
@@ -23,13 +22,14 @@ normal:
 GOTOIF testpastout ({Aleatoire20} > 0)
 
 #tout:
-LOG All
+LOG blackout_all
 WAITUNTIL {!CASSIESPEAKING}
 
 SILENTCASSIE Warning Failure Of All Lights In All Of The Facility in 5 seconds | <color=#FF0000>Warning</color> Failure Of All Lights In <color=#FF0000>All</color> Of The Facility in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 10
-LIGHTSOFF * {Temps}
+TESLA DISABLE {blackout_temps}
+LIGHTSOFF * {blackout_temps}
 GOTO Fin
 
 
@@ -39,7 +39,7 @@ GOTO Fin
 #WAITUNTIL {!CASSIESPEAKING}
 #CASSIE XMAS_BOUNCYBALLS | <color=#FF00FF>Pink</color>
 #LIGHTCOLOR ALL 255 0 255
-#WAITSEC {Temps}
+#WAITSEC {blackout_temps}
 #RESETLIGHTCOLOR ALL
 #GOTO Fin
 
@@ -60,7 +60,7 @@ WAITUNTIL {!CASSIESPEAKING}
 SILENTCASSIE Warning Failure Of All Lights In Light Containment Zone in 5 seconds | <color=#ff6700>Warning</color> Failure Of All Lights In <color=#1BBB9B>Light</color> Containment Zone in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 5
-LIGHTSOFF LightContainment {Temps}
+LIGHTSOFF LightContainment {blackout_temps}
 GOTO Fin
 
 #1/3 Heavy
@@ -70,7 +70,8 @@ WAITUNTIL {!CASSIESPEAKING}
 SILENTCASSIE Warning Failure Of All Lights In Heavy Containment Zone in 5 seconds | <color=#ff6700>Warning</color> Failure Of All Lights In <color=#431919>Heavy</color> Containment Zone in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 5
-LIGHTSOFF HeavyContainment {Temps}
+TELSA DISABLE {blackout_temps}
+LIGHTSOFF HeavyContainment {blackout_temps}
 GOTO Fin
 
 #1/3 Entrance
@@ -80,9 +81,10 @@ WAITUNTIL {!CASSIESPEAKING}
 SILENTCASSIE Warning Failure Of All Lights In Entrance Zone in 5 seconds | <color=#ff6700>Warning</color> Failure Of All Lights In <color=#FFFF00>Entrance</color> Zone in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 5
-LIGHTSOFF Entrance {Temps}
+LIGHTSOFF Entrance {blackout_temps}
 GOTO Fin
 
 
 Fin:
+TESLA ENABLE
 STOP

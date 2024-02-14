@@ -1,0 +1,35 @@
+!-- HELPRESPONSE
+Auto Generated At: 14 February 2024 10:06
+Expires: 14 February 2024 10:11
+
++ ADVSETROLE +
+Sets all players to the given role with advanced settings.
+Action type: Player
+Usage: ADVSETROLE <PLAYERS> <ROLE> [SPAWNPOINT] [INVENTORY] [MAX]
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to set the role as.
+
+<role>
+  Required: YES
+  Type: RoleTypeId (ID / Number)
+  The role to set all the players as.
+
+[spawnpoint]
+  Required: NO
+  Type: Boolean (TRUE/FALSE)
+  Use spawnpoint? default: true
+
+[inventory]
+  Required: NO
+  Type: Boolean (TRUE/FALSE)
+  Use default inventory? default: true
+
+[max]
+  Required: NO
+  Type: Int (Whole Number)
+  The maximum amount of players to set the role of. Variables are supported. (default: unlimited).

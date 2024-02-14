@@ -1,0 +1,22 @@
+!-- HELPRESPONSE
+Auto Generated At: 13 February 2024 07:22
+Expires: 13 February 2024 07:27
+
++ HTTPGET +
+Sends an HTTP GET request to a website.
+Action type: Yielding
+Usage: HTTPGET <URL>
+
+This action pauses the script until the request is complete. Upon completion, three variables will be created:
+- {HTTPSUCCESS} - True or false, depending on if the website returned HTTP Code 200.
+- {HTTPCODE} - The status code response.
+- {HTTPRESULT} - The body of information returned from the website.
+
+These variables are created as per-script variables, meaning they can only be used in the script that created them. If these variables already exist (such as a prior HTTPGET/HTTPPOST execution), they will be overwritten with new values.
+
+
+Arguments:
+<url>
+  Required: YES
+  Type: String (Message/Text)
+  The URL to send a GET request to.

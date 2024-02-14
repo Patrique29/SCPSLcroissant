@@ -2,9 +2,8 @@
 #debug
 #WAITSEC 5
 
-Debut:
 
-WAITSEC 300 - 2 * {CHANCE100}
+WAITSEC (300 - 2 * {CHANCE100})*{systemMalfunction_Time}
 
 
 SAVE update_aleatoire100 ({CHANCE}*100)
@@ -17,10 +16,14 @@ GOTOIF doorStuck ({update_aleatoire100} > {update_condi})
 blackout:
 PRINT update_blackout
 EXECUTESCRIPT blackout
-GOTO Debut
+GOTO Fin
 
 doorStuck:
 GOTOIF blackout ({WARHEADDETONATED} OR {WARHEADCOUNTING})
 PRINT update_doorStuck
 EXECUTESCRIPT doorStuck
-GOTO Debut
+GOTO Fin
+
+Fin:
+
+STOP

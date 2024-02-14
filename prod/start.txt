@@ -2,6 +2,7 @@
 #i'm too lazy to put all of this in autostart
 WAITUNTIL {ROUNDSTARTED}
 
+EXECUTESCRIPT globalEvent
 EXECUTESCRIPT update
 EXECUTESCRIPT SCPNOE
 EXECUTESCRIPT classD

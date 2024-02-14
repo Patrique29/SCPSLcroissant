@@ -1,0 +1,34 @@
+!-- HELPRESPONSE
+Auto Generated At: 12 February 2024 06:52
+Expires: 12 February 2024 06:57
+
++ GIVECANDY +
+Gives the targeted players a candy.
+Action type: Inventory
+Usage: GIVECANDY <PLAYERS> <ITEM> [AMOUNT]
+
+ A full list of valid Candy IDs (as of 12/02/2024 07:52) follows:
+- [1] Rainbow
+- [2] Yellow
+- [3] Purple
+- [4] Red
+- [5] Green
+- [6] Blue
+- [7] Pink
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to give the candy to.
+
+<item>
+  Required: YES
+  Type: CandyKindID
+  The candy to give.
+
+[amount]
+  Required: NO
+  Type: Int (Whole Number)
+  The amount to give. Variables are supported. Default: 1

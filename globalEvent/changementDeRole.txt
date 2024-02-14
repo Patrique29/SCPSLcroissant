@@ -1,0 +1,100 @@
+##Special roles for all players
+
+
+## CLASSD 
+#Enfant 
+# do not the kid
+# commence avec 3 bonbon arc-en-ciel (peut en reprendre 2 comme normal)
+# est un peu plus petit que normal
+
+GOTOIF 
+
+
+PLAYERVAR SAVE {enfant} {CLASSD} 1 
+SIZE {enfant} 1 0.75 1
+GIVECANDY {enfant} 1 3
+BROADCASTPLAYER {enfant} 10 Tu es un <color=#FFC0CB>Enfant</color> \ndo not the kid \ntu commences avec un bonbon arc-en-ciel \n t'es un peu plus petit que la normal
+PRINT enfant
+GOTO scientist
+
+PLAYERVAR SAVE {diabetique} 1 
+EFFECT GIVE {diabetique} Scp207 1
+BROADCASTPLAYER {diabetique} 10 Tu es un <color=#FFFF7C>Diabétique</color> \nT'as autant de sucre dans le sang que quelqu'un qui a bu un SCP-207
+PRINT diabetique
+
+
+scientist:
+
+GOTOIF zoneManager (0.5 < {CHANCE})
+
+## Scientist
+#Gamble addict
+#- t'as trade ton kit de soin et ta carte contre 4 pieces
+#- fais en bon usage
+PLAYERVAR SAVE {gamble} {SCIENTIST} 1
+BROADCASTPLAYER {gamble} 10 Tu es un <color=#FFFF7C>Gamble Addict</color> \nT'as trade ton kit et ta carte contre 4 pieces \nfais en bon usage
+CLEARINVENTORY {gamble}
+#give 4 coins
+GIVE {gamble} 35 4
+PRINT Gamble addict
+
+GOTO guard
+
+zoneManager:
+#Zone Manager
+#- tu as une carte de zone manager (d'où le nom)
+#- tu commence à heavy
+#- bon courage
+PLAYERVAR SAVE {zoneManager} {SCIENTIST} 1
+BROADCASTPLAYER {zoneManager} 10 Tu es un <color=#0d7979>Zone Manager</color> \nT'as une carte de zone manager (d'où le nom) \nTu commences à heavy \nBon courage...
+#remove all
+CLEARINVENTORY {zoneManager}
+#give kit
+GIVE {zoneManager} 14
+#give adrenaline
+GIVE {zoneManager} 33
+#give zone manager card
+GIVE {zoneManager} 3
+TPROOM {zoneManager} {RANDOMROOM:HeavyContainment}
+PRINT zone manager
+
+
+guard:
+
+
+GOTOIF scp914 (50 < {CHANCE100})
+## guard
+#Chef des gardes
+#- t'as une carte de private (celle qui peut pas ouvrir les gates)
+#- et un crossvec
+
+PLAYERVAR SAVE {headGuard} {GUARDS} 1
+BROADCASTPLAYER {headGuard} 10 Tu es un <color=#70C3FF>Chef des gardes du site</color> \nT'as une carte de private \net un crossvec
+#remove guard card
+REMOVEITEM {headGuard} 4
+#remove FSP9
+REMOVEITEM {headGuard} 23
+#give private card
+GIVE {headGuard} 5
+#give crossvec
+GIVE {headGuard} 21 
+PRINT headGuard
+GOTO Fin
+
+scp914:
+#Garde de 914
+#- tu commence à 914
+#- mais on a volé ta carte
+#- et ntm
+PLAYERVAR SAVE {guard914} {GUARDS} 1
+BROADCASTPLAYER {guard914} 10 Tu es <b>Le</b> <color=#6B6B38>garde de SCP-914</color> \nTu commences à 914 \nmais on a volé ta carte \net ntm aussi
+TPROOM {guard914} Lcz914
+#remove guard card
+REMOVEITEM {guard914} 4
+PRINT guard914
+GOTO Fin
+
+
+Fin:
+
+

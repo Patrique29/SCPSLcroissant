@@ -1,11 +1,13 @@
+!-- LOOP
 # Wait for a Chaos respawn wave.
 WAITUNTIL {WAVERESPAWNING}
 PRINT marauderPerChaosRespawn_{LASTRESPAWNTEAM}
 LOG marauderPerChaosRespawn_{LASTRESPAWNTEAM}
 
-STOPIF {LASTRESPAWNTEAM} = NineTailedFox
 
+STOPIF {LASTRESPAWNTEAM} = NineTailedFox
 STOPIF {RESPAWNEDPLAYERS} < 2
+
 
 # Grab one random respawned player and save them as a variable, "INTRUDER".
 PLAYERVAR SAVE {marauderP_elu} {RESPAWNEDPLAYERS} 1
@@ -15,3 +17,5 @@ SETROLE {marauderP_elu} ChaosMarauder
 
 # Delete the variable so it isn't accidentally re-used later on.
 PLAYERVAR DELETE {marauderP_elu}
+
+WAITSEC 50

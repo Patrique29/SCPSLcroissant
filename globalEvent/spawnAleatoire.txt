@@ -1,0 +1,11 @@
+#fait commencé dans un endroit aléatoire
+
+TPROOM {CLASSD} {RANDOMROOM}
+TPROOM {SCIENTIST} {RANDOMROOM}
+TPROOM {GUARDS} {RANDOMROOM}
+
+#don't tp the 173
+STOPIF ({SCP173} > 0)
+TPROOM {SCPS} {RANDOMROOM}
+STOP
+

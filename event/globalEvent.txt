@@ -1,0 +1,66 @@
+##Les events pour tout un round 
+##wola g pa copié de mayhem
+
+#in %
+SAVE {globalEvent_Proba} 20
+
+#chances
+GOTOIF tour1 (50 < {CHANCE100})
+
+
+GOTOIF systemMalfunction ({CHANCE3} = 1)
+SAVE systemMalfunction_Time 1
+
+
+GOTOIF roleHumain ({CHANCE3} = 2)
+
+GOTO randomSpawn
+
+tour1:
+
+GOTOIF roleSCP ({CHANCE3} = 1)
+
+GOTOIF roleToutLeMonde ({CHANCE3} = 2)
+
+GOTO rien
+###############################################################
+systemMalfunction:
+BROADCAST 10 <u>Global event :</u> On dirai que les systèmes informatiques sont défaillant...
+EXECUTESCRIPT systemMalfunction
+LOG globalEvent_systemMalfunction
+GOTO Fin
+
+roleHumain:
+BROADCASTPLAYER {SCPS} 10 <u>Global event :</u> Les humains ont un peut changé
+BROADCASTPLAYER {HUMANS} 10 <u>Global event :</u> Les humains ont des roles spéciaux
+#les broadcasts players sont dans le truc
+EXECUTESCRIPT changementDeRole
+LOG globalEvent_roleHumain
+GOTO Fin
+
+roleSCP:
+BROADCASTPLAYER {HUMANS} 10 <u>Global event :</u> Le SCP a un peu changé
+BROADCASTPLAYER {SCPS} 10 <u>Global event :</u> Le SCP a un role spécial
+EXECUTESCRIPT SmallCP
+LOG globalEvent_roleSCP
+GOTO Fin
+
+roleToutLeMonde:
+BROADCAST 10 <u>Global event :</u> Tout le monde a un peu changé. Yippee !!
+EXECUTESCRIPT changementDeRole
+EXECUTESCRIPT SmallCP
+LOG globalEvent_roleToutLeMonde
+GOTO Fin
+
+randomSpawn:
+BROADCAST 10 <u>Global event :</u> Les spawns sont random bon courage
+EXECUTESCRIPT spawnAleatoire
+LOG globalEvent_SpawnAleatoire
+GOTO Fin
+
+rien:
+BROADCAST 10 <u>Global event :</u> y'a r aujourd'hui
+LOG globalEvent_rien
+
+Fin:
+STOP

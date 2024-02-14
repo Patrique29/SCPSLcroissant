@@ -1,0 +1,15 @@
+!-- HELPRESPONSE
+Auto Generated At: 12 February 2024 10:51
+Expires: 12 February 2024 10:56
+
++ CLEARINVENTORY +
+Clears inventory of the targeted players.
+Action type: Inventory
+Usage: CLEARINVENTORY <PLAYERS>
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to remove the items from.

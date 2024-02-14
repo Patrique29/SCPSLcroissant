@@ -1,0 +1,27 @@
+!-- HELPRESPONSE
+Auto Generated At: 13 February 2024 07:24
+Expires: 13 February 2024 07:29
+
++ HTTPPOST +
+Sends an HTTP POST request to a website.
+Action type: Yielding
+Usage: HTTPPOST <URL> <BODY>
+
+This action pauses the script until the request is complete. Upon completion, three variables will be created:
+- {HTTPSUCCESS} - True or false, depending on if the website returned HTTP Code 200.
+- {HTTPCODE} - The status code response.
+- {HTTPRESULT} - The body of information returned from the website.
+
+These variables are created as per-script variables, meaning they can only be used in the script that created them. If these variables already exist (such as a prior HTTPGET/HTTPPOST execution), they will be overwritten with new values.
+
+
+Arguments:
+<url>
+  Required: YES
+  Type: String (Message/Text)
+  The URL to send a POST request to.
+
+<body>
+  Required: YES
+  Type: String (Message/Text)
+  The body to send (JSON formatting). Variables are supported.

@@ -4,24 +4,43 @@ WAITSEC {RAND:90:300}
 
 GOTOIF deconta ({DECONTAMINATED})
 #light not decontaminated
+GOTOIF gateB (systemMalfunction_GateElevatorA = 0)
 WAITSEC {RAND:5:20}
 ELEVATOR SEND GateA
+GOTO next1
+gateB:
 WAITSEC {RAND:5:20}
 ELEVATOR SEND GateB
+
+
+next1:
 WAITSEC {RAND:5:20}
 ELEVATOR SEND Nuke
 WAITSEC {RAND:5:20}
 ELEVATOR SEND Scp049
+
+GOTOIF lczB (systemMalfunction_LczElevator1 = 0)
+
 WAITSEC {RAND:5:20}
 ELEVATOR SEND LczA
+GOTO Fin
+
+lczB:
 WAITSEC {RAND:5:20}
 ELEVATOR SEND LczB
 GOTO Fin
 
 deconta:
+
+GOTOIF gateB2 (systemMalfunction_GateElevatorA = 0)
+WAITSEC {RAND:5:20}
 ELEVATOR SEND GateA
+GOTO next1
+gateB2:
 WAITSEC {RAND:5:20}
 ELEVATOR SEND GateB
+next2:
+
 WAITSEC {RAND:5:20}
 ELEVATOR SEND Nuke
 WAITSEC {RAND:5:20}

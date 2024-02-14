@@ -1,1 +1,0 @@
-##The door,light,gate malfunction are more common + autonuke start once per game at a random time which is cancellable (+ normal autonuke which is NOT cancellable)

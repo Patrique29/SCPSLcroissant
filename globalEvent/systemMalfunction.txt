@@ -1,0 +1,34 @@
+##The door,light,gate malfunction are more common + autonuke start once per game at a random time which is cancellable ( + normal autonuke which is NOT cancellable)
+
+#coef of the cooldown
+SAVE {systemMalfunction_Time} 0.75
+
+
+GOTOIF gateB ({CHANCE100} > 50)
+ELEVATOR LOCK GateA
+SAVE systemMalfunction_GateElevatorA 1
+
+GOTO elevator
+gateB:
+ELEVATOR LOCK GateB
+SAVE systemMalfunction_GateElevatorA 0
+
+elevator:
+GOTOIF elevatorB ({CHANCE100} > 50)
+ELEVATOR LOCK LczA
+SAVE systemMalfunction_LczElevatorA 1
+
+
+GOTO nuke
+
+elevatorB:
+ELEVATOR LOCK LczB
+SAVE systemMalfunction_LczElevatorA 0
+
+
+nuke:
+
+#entre 3 et 25 min
+WAITSEC {RAND:180:1500}
+BROADCAST 30 L'AUTONUKE A ETE ACTIVER (elle est déactivable)
+WARHEAD START

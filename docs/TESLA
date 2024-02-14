@@ -1,0 +1,45 @@
+!-- HELPRESPONSE
+Auto Generated At: 13 February 2024 07:14
+Expires: 13 February 2024 07:19
+
++ TESLA +
+Modifies tesla gates.
+Action type: Map
+Usage: TESLA <MODE> <TARGET> [DURATION]
+
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The mode to run. Valid options: PLAYERS, ROLETYPE, DISABLE, ENABLE
+
+<target>
+  Required: YES
+  Type: Any Type
+  The targets. Different type based on the mode.
+PLAYERS: A list of players.
+ROLETYPE: A valid RoleType (eg. ClassD, Scp173, etc)
+DISABLE & ENABLE: None
+
+[duration]
+  Required: NO
+  Type: Float (Number)
+  The time before reversing the effect. Variables are supported.
+
+Examples:
+
+=== Case 1 ===
+Disable tesla gates entirely for 10 seconds.
+
+```
+TELSA DISABLE 10
+```
+
+=== Case 2 ===
+Disable tesla gate for facility guards.
+
+```
+TESLA ROLETYPE FacilityGuard
+```
+

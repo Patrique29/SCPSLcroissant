@@ -1,0 +1,15 @@
+!-- HELPRESPONSE
+Auto Generated At: 13 February 2024 07:19
+Expires: 13 February 2024 07:24
+
++ DECONTAMINATE +
+Enables, disables, or forces decontamination.
+Action type: Map
+Usage: DECONTAMINATE [MODE]
+
+
+Arguments:
+[mode]
+  Required: NO
+  Type: String (Message/Text)
+  The action (ENABLE, DISABLE, FORCE). Default: FORCE

@@ -1,0 +1,35 @@
+!-- HELPRESPONSE
+Auto Generated At: 09 February 2024 07:58
+Expires: 09 February 2024 08:03
+
++ EFFECT +
+Action for giving/removing player effects.
+Action type: Player
+Usage: EFFECT <MODE> <PLAYERS> <EFFECT> [INTENSITY] [DURATION]
+
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The mode (GIVE, REMOVE)
+
+<players>
+  Required: YES
+  Type: Player List
+  The players to affect.
+
+<effect>
+  Required: YES
+  Type: EffectType
+  The effect to give or remove.
+
+[intensity]
+  Required: NO
+  Type: Byte (Whole Number, 0-255)
+  The intensity of the effect, between 0-255. Variables are supported. Defaults to 1.
+
+[duration]
+  Required: NO
+  Type: Int (Whole Number)
+  The duration of the effect, or no duration for a permanent effect. Variables are supported.

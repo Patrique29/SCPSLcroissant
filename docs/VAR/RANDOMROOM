@@ -1,0 +1,18 @@
+!-- HELPRESPONSE
+Auto Generated At: 11 February 2024 17:45
+Expires: 11 February 2024 17:50
+
+=== VARIABLE ===
+Name: {RANDOMROOM}
+Description: Gets the RoomType of a random room. Can be filtered by zone.
+Stores Players: NO
+Usage: {RANDOMROOM:ZONE}
+Variable Type: String (Text)
+
+Arguments:
+
+[zone]
+  Required: NO
+  Type: ZoneType
+  A zone to filter by (optional).
+

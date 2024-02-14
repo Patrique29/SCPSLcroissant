@@ -1,0 +1,25 @@
+!-- HELPRESPONSE
+Auto Generated At: 14 February 2024 10:07
+Expires: 14 February 2024 10:12
+
++ SETROLE +
+Sets all players to the given role.
+Action type: Player
+Usage: SETROLE <PLAYERS> <ROLE> [MAX]
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to set the role as.
+
+<role>
+  Required: YES
+  Type: RoleTypeId (ID / Number)
+  The role to set all the players as.
+
+[max]
+  Required: NO
+  Type: Int (Whole Number)
+  The maximum amount of players to set the role of. Variables are supported. (default: unlimited).

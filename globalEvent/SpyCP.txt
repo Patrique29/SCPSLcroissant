@@ -1,7 +1,7 @@
-!-- LOOP
+#!-- LOOP
 ##the one with the reskin
 
-
+#WAITSEC 600
 SAVE testReskin_rand {CHANCE20}
 PRINT testReskin_rand = {testReskin_rand}
 PLAYERVAR SAVE {reskined} {SCPS} 1

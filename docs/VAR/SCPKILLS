@@ -1,0 +1,11 @@
+!-- HELPRESPONSE
+Auto Generated At: 12 February 2024 16:54
+Expires: 12 February 2024 16:59
+
+=== VARIABLE ===
+Name: {SCPKILLS}
+Description: The amount of SCP-related kills.
+Stores Players: NO
+Usage: {SCPKILLS}
+Variable Type: Numerical
+

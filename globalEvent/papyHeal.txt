@@ -1,0 +1,16 @@
+##commence avec 75% de ses HP mais regen 100HP par kill même au dessus de sa vie max normal
+STOPIF {SCP106} = 0
+PRINT ya papy
+MAXHP {SCP106} 1650
+HP {SCP106} 1650
+
+SAVE i 0
+loop:
+PRINT loop
+GOTOIF Fin ({SCP106} = 0)
+WAITUNTIL {SCPKILLS} > {i}
+SAVE i {i}+1
+PRINT i={i}
+GOTO loop
+
+Fin:

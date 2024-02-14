@@ -1,0 +1,7 @@
+
+
+
+WAITUNTIL ({SCPS} = 0)
+
+PLAYERVAR SAVE {nouveauSCP} {HUMANS} 1
+SETROLE {nouveauSCP} {}
