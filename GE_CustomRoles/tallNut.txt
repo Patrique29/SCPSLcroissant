@@ -1,0 +1,10 @@
+##TALL PEANUT
+
+
+SIZE {SCP173} 0.40 1.05 0.40
+BROADCASTPLAYER {SCP173} 10 Tu es un <color=#F00>Tall NUT</color> \nu tol\n fuck you
+
+GOTO Fin
+
+Fin:
+STOP

@@ -1,8 +1,0 @@
-##smol = 0.5 hp + 2 faster + and smoller
-
-BROADCASTPLAYER {SCPS} 20 Global event : u smol et x1.10 + rapide
-
-SAVE {SmolCP_HP} {SHOW:SCPS:HP}
-PRINT {SmolCP_HP}
-EFFECT GIVE {SCPS} MovementBoost 10
-SIZE {SCPS} 1 0.5 1

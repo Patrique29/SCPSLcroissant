@@ -1,0 +1,18 @@
+!-- HELPRESPONSE
+Auto Generated At: 09 March 2024 08:03
+Expires: 09 March 2024 08:08
+
++ COMMAND +
+Runs a server command with full permission. Variables are supported.
+Action type: Miscellaneous
+Usage: COMMAND <COMMAND>
+
+This action executes commands as the server. Therefore, the command needs '/' before it if it's a RA command, or '.' before it if its a console command.
+Note: Player variables will be converted to the amount of players when used directly. In order to use player variables to target players within a command, encase them within the 'C' variable. For example: 'COMMAND /kill {C:PLAYERS}' to kill all players.
+
+
+Arguments:
+<command>
+  Required: YES
+  Type: String (Message/Text)
+  The command to run.

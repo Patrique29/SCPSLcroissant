@@ -1,0 +1,20 @@
+!-- HELPRESPONSE
+Auto Generated At: 06 March 2024 08:02
+Expires: 06 March 2024 08:07
+
++ SPAWNRULE +
+Creates a new spawn rule, modifying how players spawn at the start of the game. MUST BE USED BEFORE THE ROUND STARTS.
+Action type: Round Rule
+Usage: SPAWNRULE <ROLE> [MAX]
+
+
+Arguments:
+<role>
+  Required: YES
+  Type: RoleTypeId (ID / Number)
+  The role to create the rule for.
+
+[max]
+  Required: NO
+  Type: Int (Whole Number)
+  The maximum amount of players to spawn as this role. If not provided, EVERY player who does not become a role with a different spawn rule will become this role. Variables are supported.

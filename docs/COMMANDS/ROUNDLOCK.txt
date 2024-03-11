@@ -1,0 +1,15 @@
+!-- HELPRESPONSE
+Auto Generated At: 06 March 2024 08:16
+Expires: 06 March 2024 08:21
+
++ ROUNDLOCK +
+Set server's roundlock.
+Action type: Round
+Usage: ROUNDLOCK <ROUNDLOCK>
+
+
+Arguments:
+<roundlock>
+  Required: YES
+  Type: Boolean (TRUE/FALSE)
+  Whether or not to lock the round.

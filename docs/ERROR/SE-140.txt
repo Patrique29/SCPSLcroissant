@@ -1,0 +1,8 @@
+!-- HELPRESPONSE
+Auto Generated At: 03 March 2024 06:09
+Expires: 03 March 2024 06:14
+
+=== ERROR CODE: SE-140 ===
+ID: 140
+Error replacing the {0} variable: {1}
+This error occurs when an error occurred while replacing a variable. Please report this error in the Scripted Events Discord server.

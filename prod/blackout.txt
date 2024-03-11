@@ -1,10 +1,4 @@
 SAVE blackout_temps 30 + {CHANCE20}
-SAVE Aleatoire100 {CHANCE50}
-SAVE Aleatoire20 {CHANCE20}
-SAVE Aleatoire3 {CHANCE3}
-SAVE Aleatoire10 {CHANCE5}
-
-
 
 GOTOIF normal ({!WARHEADDETONATED})
 
@@ -18,8 +12,8 @@ LIGHTSOFF Surface {blackout_temps}
 GOTO Fin
 
 normal:
-#Blackout tout 1/20 
-GOTOIF testpastout ({Aleatoire20} > 0)
+#Blackout tout 1/100 
+GOTOIF testpastout ({CHANCE5} != 2)
 
 #tout:
 LOG blackout_all
@@ -28,7 +22,7 @@ WAITUNTIL {!CASSIESPEAKING}
 SILENTCASSIE Warning Failure Of All Lights In All Of The Facility in 5 seconds | <color=#FF0000>Warning</color> Failure Of All Lights In <color=#FF0000>All</color> Of The Facility in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 10
-TESLA DISABLE {blackout_temps}
+
 LIGHTSOFF * {blackout_temps}
 GOTO Fin
 
@@ -45,7 +39,7 @@ GOTO Fin
 
 
 testpastout: 
-GOTOIF entrance ({Aleatoire3} = 1) 
+GOTOIF entrance ({CHANCE3} = 1) 
 
 #lightHeavy:
 #1/2 de prend light ou heavy
@@ -70,7 +64,7 @@ WAITUNTIL {!CASSIESPEAKING}
 SILENTCASSIE Warning Failure Of All Lights In Heavy Containment Zone in 5 seconds | <color=#ff6700>Warning</color> Failure Of All Lights In <color=#431919>Heavy</color> Containment Zone in 5 seconds
 WAITUNTIL {!CASSIESPEAKING}
 WAITSEC 5
-TELSA DISABLE {blackout_temps}
+
 LIGHTSOFF HeavyContainment {blackout_temps}
 GOTO Fin
 
@@ -86,5 +80,4 @@ GOTO Fin
 
 
 Fin:
-TESLA ENABLE
 STOP

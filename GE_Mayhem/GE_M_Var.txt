@@ -1,0 +1,2 @@
+#set to 1 to activate the puppet for the round 
+SAVE {GE_M_isActivated} 1

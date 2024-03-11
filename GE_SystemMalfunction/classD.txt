@@ -1,5 +1,5 @@
 
-GOTOIF boom ({CHANCE100} < 2)
+GOTOIF boom ({CHANCE50} < 1)
 
 PRINT classD_normal
 DOOR OPEN PrisonDoor

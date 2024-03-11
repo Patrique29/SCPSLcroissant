@@ -1,0 +1,30 @@
+!-- HELPRESPONSE
+Auto Generated At: 06 March 2024 08:07
+Expires: 06 March 2024 08:12
+
++ EFFECTRULE +
+Action for setting rules to apply effects to specific roles/teams/players on-spawn.
+Action type: Round Rule
+Usage: EFFECTRULE <MODE> <TARGET> <EFFECT> [INTENSITY]
+
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The mode (GIVE, REMOVE)
+
+<target>
+  Required: YES
+  Type: Any Type
+  The players to affect, or the RoleType/Team to give the effect.
+
+<effect>
+  Required: YES
+  Type: EffectType
+  The effect to give or remove.
+
+[intensity]
+  Required: NO
+  Type: Byte (Whole Number, 0-255)
+  The intensity of the effect, between 0-255. Variables are supported. Defaults to 1.

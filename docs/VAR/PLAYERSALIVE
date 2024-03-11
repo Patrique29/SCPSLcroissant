@@ -1,0 +1,11 @@
+!-- HELPRESPONSE
+Auto Generated At: 23 February 2024 12:35
+Expires: 23 February 2024 12:40
+
+=== VARIABLE ===
+Name: {PLAYERSALIVE}
+Description: The amount of alive players in the server.
+Stores Players: YES
+Usage: {PLAYERSALIVE}
+Variable Type: Numerical
+

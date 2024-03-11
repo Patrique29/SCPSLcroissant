@@ -1,0 +1,67 @@
+!-- HELPRESPONSE
+Auto Generated At: 08 March 2024 16:24
+Expires: 08 March 2024 16:29
+
+=== ENUM ===
+Name: DoorType
+The list of valid in-game door types.
+
+Options:
+0 - UnknownDoor
+1 - Scp914Door
+2 - GR18Inner
+3 - Scp049Gate
+4 - Scp049Armory
+5 - Scp079First outside of the blast door
+6 - Scp079Second
+7 - Scp096
+8 - Scp079Armory
+9 - Scp106Primary
+10 - Scp106Secondary
+11 - Scp173Gate
+12 - Scp173Connector
+13 - Scp173Armory
+14 - Scp173Bottom
+15 - GR18Gate
+16 - Scp914Gate
+17 - Scp939Cryo
+18 - CheckpointLczA
+19 - CheckpointLczB
+20 - EntranceDoor
+21 - EscapePrimary
+22 - EscapeSecondary
+23 - ServersBottom
+24 - GateA
+25 - GateB
+26 - HczArmory
+27 - HeavyContainmentDoor
+28 - HID
+29 - HIDLeft
+30 - HIDRight
+31 - Intercom
+32 - LczArmory
+33 - LczCafe
+34 - LczWc
+35 - LightContainmentDoor
+36 - NukeArmory
+37 - NukeSurface
+38 - PrisonDoor
+39 - SurfaceGate
+40 - Scp330
+41 - Scp330Chamber
+42 - CheckpointGate
+43 - SurfaceDoor
+44 - CheckpointEzHczA
+45 - CheckpointEzHczB
+46 - UnknownGate
+47 - UnknownElevator
+48 - ElevatorGateA
+49 - ElevatorGateB
+50 - ElevatorNuke
+51 - ElevatorScp049
+52 - ElevatorLczA
+53 - ElevatorLczB
+54 - CheckpointArmoryA
+55 - CheckpointArmoryB
+56 - Airlock
+57 - Scp173NewGate

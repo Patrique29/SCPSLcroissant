@@ -1,0 +1,21 @@
+WAITUNTIL {ROUNDSTARTED}
+
+STOPIF ({GE_M_isActivated} != 1)
+PLAYERVAR SAVE {GE_M_pc} {HUMANS} 1
+PLAYERVAR SAVE {GE_M_scp} {SCPS}
+PRINT {SHOW:GE_M_pc:ID}
+TPDOOR {GE_M_scp} Scp049Gate
+ADVSETROLE {GE_M_scp} 10
+ADVSETROLE {GE_M_pc} 7
+MAXHP {GE_M_scp} 5000
+HP {GE_M_scp} 5000
+
+COMMAND /lvl {C:GE_M_pc} 3
+COMMAND /give {C:GE_M_scp} 41
+SAVE iGEM 0
+again:
+SAVE iGEM {iGEM}+1
+COMMAND /give {C:GE_M_scp} 19
+COMMAND /give {C:GE_M_scp} 19
+GOTOIF again (iGEM > 10)
+COMMAND /forceequip {C:GE_M_scp} 41

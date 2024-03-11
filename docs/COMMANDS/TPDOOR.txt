@@ -1,0 +1,20 @@
+!-- HELPRESPONSE
+Auto Generated At: 09 March 2024 07:34
+Expires: 09 March 2024 07:39
+
++ TPDOOR +
+Teleports players to the specified door.
+Action type: Player
+Usage: TPDOOR <PLAYERS> <DOOR>
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to teleport
+
+<door>
+  Required: YES
+  Type: DoorType
+  The door type to teleport to.

@@ -1,0 +1,8 @@
+ELEVATOR LOCK Scp049
+STOPIF ({SCP173} = 0 AND {SCP049} = 0)
+GOTOIF peanut ({SCP049} = 0)
+TPDOOR {SCP049} Scp079First
+
+peanut:
+WAITSEC {tempsLockdown}
+TPDOOR {SCP173} Scp079First

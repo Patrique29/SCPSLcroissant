@@ -7,7 +7,7 @@ GOTOIF peanut {SCP173} != 0
 PRINT y'a pas de peanut
 SAVE tempsLockdown 0 
 GOTO Lockdown
-
+#9 -- 0s
 #8< -- 15s
 #7 -- 30s
 #6 -- 45s
@@ -22,7 +22,7 @@ SAVE {tempsLockdown} 135-({PLAYERS}*15)
 GOTOIF positif ({PLAYERS} >= 2)
 
 #negatif
-PRINT negatif
+PRINT Locknegatif
 SAVE {tempsLockdown} 0
 GOTO Lockdown
 

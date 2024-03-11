@@ -3,13 +3,14 @@
 #WAITSEC 5
 
 
-WAITSEC (300 - 2 * {CHANCE100})*{systemMalfunction_Time}
+WAITSEC (300 - {CHANCE100} + {CHANCE100})*{systemMalfunction_Time}
 
-
+WAITUNTIL {!WARHEADCOUNTING}
 SAVE update_aleatoire100 ({CHANCE}*100)
 SAVE update_condi {ROUNDMINUTES}*2
 PRINT aleatoire100 = {update_aleatoire100}
 PRINT condi = {update_condi}
+
 
 GOTOIF doorStuck ({update_aleatoire100} > {update_condi})
 

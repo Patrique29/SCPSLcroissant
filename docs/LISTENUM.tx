@@ -1,0 +1,19 @@
+!-- HELPRESPONSE
+Auto Generated At: 05 March 2024 08:01
+Expires: 05 March 2024 08:06
+
+=== ENUMS ===
+Enums are, at the basic level, 'options' in code. Different 'Enum' inputs are required for various actions, such as roles, items, etc.
+Type 'shelp <enum name>' to see each different enum's valid options.
+
+RoleTypeId - The list of valid in-game roles.
+Team - The list of valid in-game teams.
+ItemType - The list of valid in-game items.
+ZoneType - The list of valid in-game zones.
+RoomType - The list of valid in-game rooms.
+DamageType - The list of valid in-game damage types.
+DoorType - The list of valid in-game door types.
+ElevatorType - The list of valid in-game elevator types.
+SpawnLocationType - The list of valid in-game spawn location types.
+SpawnableTeamType - The list of valid in-game spawnable team types.
+EffectType - The list of valid in-game effects.

@@ -1,13 +1,15 @@
 !-- AUTORUN
 #i'm too lazy to put all of this in autostart
+#update no autostart so idc anymore
 WAITUNTIL {ROUNDSTARTED}
 
 EXECUTESCRIPT globalEvent
 EXECUTESCRIPT update
 EXECUTESCRIPT SCPNOE
 EXECUTESCRIPT classD
-EXECUTESCRIPT marauderPerChaosRespawn
+EXECUTESCRIPT Respawn
 EXECUTESCRIPT noeQuiKaboom
 EXECUTESCRIPT peanutLockdown
 EXECUTESCRIPT autonuke
 EXECUTESCRIPT conscientElevator
+STOP

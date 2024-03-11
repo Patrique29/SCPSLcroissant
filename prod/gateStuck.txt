@@ -1,5 +1,5 @@
 !-- LOOP
-## 
+## NOT IN USE
 
 #6s à 15s
 SAVE gateStuck_Temps 5 + {CHANCE10}

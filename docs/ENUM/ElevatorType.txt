@@ -1,0 +1,16 @@
+!-- HELPRESPONSE
+Auto Generated At: 05 March 2024 08:02
+Expires: 05 March 2024 08:07
+
+=== ENUM ===
+Name: ElevatorType
+The list of valid in-game elevator types.
+
+Options:
+0 - Unknown
+1 - GateA
+2 - GateB
+3 - Nuke
+4 - Scp049
+5 - LczA
+6 - LczB

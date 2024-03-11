@@ -1,0 +1,25 @@
+!-- HELPRESPONSE
+Auto Generated At: 06 March 2024 08:15
+Expires: 06 March 2024 08:20
+
++ INFECTRULE +
+Creates a new infection rule.
+Action type: Round Rule
+Usage: INFECTRULE <OLDROLE> <NEWROLE> [MOVEPLAYER]
+
+
+Arguments:
+<oldRole>
+  Required: YES
+  Type: RoleTypeId (ID / Number)
+  The role a player must die as to be infected.
+
+<newRole>
+  Required: YES
+  Type: RoleTypeId (ID / Number)
+  The role a player will become.
+
+[movePlayer]
+  Required: NO
+  Type: Boolean (TRUE/FALSE)
+  TRUE if the player should be moved to their death position, FALSE (or leave empty) to leave at spawn.

@@ -1,0 +1,7 @@
+##smol = 0.5 hp + 2 faster + and smoller
+
+BROADCASTPLAYER {SCPS} 20 Global event : u smol
+
+SAVE {SmolCP_HP} {SHOW:SCPS:HP}
+PRINT {SmolCP_HP}
+SIZE {SCPS} 1 0.75 1

@@ -1,0 +1,9 @@
+
+WAITUNTIL {{SCPS} > 0}
+WAITUNTIL {{SCPS} = 0}
+GOTOIF contagion ({CHANCE100} = 37)
+STOP
+contagion:
+PLAYERVAR SAVE {scpContagieux_SCPed} {PLAYERSALIVE} 1
+ADVSETROLE {scpContagieux_SCPed} {SCP} FALSE
+PLAYERVAR DELETE {scpContagieux_SCPed}

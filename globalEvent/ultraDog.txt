@@ -1,3 +1,0 @@
-##Ultra Sensitive Dog
-##Can detect event in the facility (914,Nuke armed..)
-#USE {INROOM} (peanut, gates, checkpoints)

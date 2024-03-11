@@ -1,0 +1,63 @@
+!-- HELPRESPONSE
+Auto Generated At: 03 March 2024 06:34
+Expires: 03 March 2024 06:39
+
+=== ENUM ===
+Name: RoomType
+The list of valid in-game rooms.
+
+Options:
+0 - Unknown
+1 - LczArmory
+2 - LczCurve
+3 - LczStraight
+4 - Lcz914
+5 - LczCrossing
+6 - LczTCross
+7 - LczCafe
+8 - LczPlants
+9 - LczToilets
+10 - LczAirlock
+11 - Lcz173
+12 - LczClassDSpawn
+13 - LczCheckpointB
+14 - LczGlassBox
+15 - LczCheckpointA
+16 - Hcz079
+17 - HczEzCheckpointA
+18 - HczEzCheckpointB
+19 - HczArmory
+20 - Hcz939
+21 - HczHid
+22 - Hcz049
+23 - HczCrossing
+24 - Hcz106
+25 - HczNuke
+26 - HczTesla
+27 - HczServers
+28 - HczTCross
+29 - HczCurve
+30 - Hcz096
+31 - EzVent
+32 - EzIntercom
+33 - EzGateA
+34 - EzDownstairsPcs
+35 - EzCurve
+36 - EzPcs
+37 - EzCrossing
+38 - EzCollapsedTunnel
+39 - EzConference
+40 - EzStraight
+41 - EzCafeteria
+42 - EzUpstairsPcs
+43 - EzGateB
+44 - EzShelter
+45 - Pocket
+46 - Surface
+47 - HczStraight
+48 - EzTCross
+49 - Lcz330
+50 - EzCheckpointHallway
+51 - HczTestRoom
+52 - HczElevatorA
+53 - HczElevatorB

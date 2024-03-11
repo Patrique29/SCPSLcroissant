@@ -1,0 +1,20 @@
+
+
+PLAYERVAR SAVE {tropfort} {SCPS} 1
+STOPIF ({SHOW:tropfort:USERID} != 76561198405359482@steam)
+
+PLAYERVAR SAVE {scpEnPlus} {CLASSD} 1
+
+GOTOIF pc ({CHANCE100} < 50)
+ 
+SETROLE {scpEnPlus} 7
+GOTO Fin
+
+pc:
+SETROLE {scpEnPlus} 9
+GOTO Fin
+
+
+Fin:
+
+STOP

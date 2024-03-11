@@ -5,6 +5,7 @@ Expires: 12 January 2024 06:49
 + PLAYERVAR +
 Allows manipulation of player variables.
 Action type: Variable
+
 Usage: PLAYERVAR <MODE> <VARIABLENAME> <PLAYERS> [MAX]
 
 Arguments:

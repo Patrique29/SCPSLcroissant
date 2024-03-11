@@ -1,15 +1,18 @@
 ##Les events pour tout un round 
 ##wola g pa copié de mayhem
+SAVE {systemMalfunction_Time} 1
 
-#in %
-SAVE {globalEvent_Proba} 20
+#test changementDeRole
+#GOTO roleHumain
+
+
 
 #chances
 GOTOIF tour1 (50 < {CHANCE100})
 
 
 GOTOIF systemMalfunction ({CHANCE3} = 1)
-SAVE systemMalfunction_Time 1
+
 
 
 GOTOIF roleHumain ({CHANCE3} = 2)
@@ -17,7 +20,7 @@ GOTOIF roleHumain ({CHANCE3} = 2)
 GOTO randomSpawn
 
 tour1:
-
+SAVE {systemMalfunction_Time} 1
 GOTOIF roleSCP ({CHANCE3} = 1)
 
 GOTOIF roleToutLeMonde ({CHANCE3} = 2)

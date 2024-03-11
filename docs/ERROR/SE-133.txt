@@ -1,0 +1,8 @@
+!-- HELPRESPONSE
+Auto Generated At: 03 March 2024 06:07
+Expires: 03 March 2024 06:12
+
+=== ERROR CODE: SE-133 ===
+ID: 133
+The provided value '{0}' has no associated players.
+This error occurs when a variable requires another player variable as an argument, but the other variable is not a variable that contains players. This error can be resolved by providing a valid variable that contains players.

@@ -2,8 +2,12 @@
 
 #coef of the cooldown
 SAVE {systemMalfunction_Time} 0.75
+SAVE enableElevatorBug 0
+SAVE enableCheckPointBug 0
 
 
+##enable the elevator bug
+GOTOIF nuke ({enableElevatorBug} = 0)
 GOTOIF gateB ({CHANCE100} > 50)
 ELEVATOR LOCK GateA
 SAVE systemMalfunction_GateElevatorA 1
@@ -18,17 +22,24 @@ GOTOIF elevatorB ({CHANCE100} > 50)
 ELEVATOR LOCK LczA
 SAVE systemMalfunction_LczElevatorA 1
 
-
-GOTO nuke
+GOTO checkpoint
 
 elevatorB:
 ELEVATOR LOCK LczB
 SAVE systemMalfunction_LczElevatorA 0
 
 
+
+checkpoint:
+##enable the checkpoint bug
+GOTOIF nuke ({enableCheckPointBug} = 0)
+
+
+
+
 nuke:
 
 #entre 3 et 25 min
-WAITSEC {RAND:180:1500}
-BROADCAST 30 L'AUTONUKE A ETE ACTIVER (elle est déactivable)
+WAITSEC {RAND:180:1500} 
+BROADCAST 30 L'autonuke a été activer (elle est désactivable)
 WARHEAD START

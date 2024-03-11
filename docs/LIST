@@ -82,7 +82,7 @@ SETROLE : Sets all players to the given role.
 ENDROUND : Ends the round.
 TICKET : Modifies tickets.
 STARTROUND : Starts the round.
-ROUNDLOCK : Set server's roundlock.
+INFECTRULE : Set server's roundlock.
 
 == Round Rule Actions ==
 DAMAGERULE : Creates a new damage rule.

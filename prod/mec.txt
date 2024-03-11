@@ -1,0 +1,6 @@
+SAVE {i} 1
+
+for:
+COMMAND /devdummy spawn mayel{i} 2  Patrique
+SAVE {i} {i}+1
+GOTOIF for ({i} < 11)

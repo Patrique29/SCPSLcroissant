@@ -1,0 +1,18 @@
+!-- HELPRESPONSE
+Auto Generated At: 21 February 2024 20:49
+Expires: 21 February 2024 20:54
+
+=== VARIABLE ===
+Name: {INROOM}
+Description: The amount of players in the specified room.
+Stores Players: YES
+Usage: {INROOM:ROOMTYPE}
+Variable Type: Numerical
+
+Arguments:
+
+[roomType]
+  Required: NO
+  Type: RoomType (ID / Number)
+  The room to filter by.
+

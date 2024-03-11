@@ -1,0 +1,56 @@
+!-- LOOP
+WAITSEC 30
+WAITUNTIL {WAVERESPAWNING}
+LOG Respawn_waveType = {LASTRESPAWNTEAM}
+SIZE {LASTRESPAWNTEAM} 1 1 1
+CUSTOMINFO CLEAR {LASTRESPAWNTEAM}
+
+GOTOIF NTF ({LASTRESPAWNTEAM} = NineTailedFox)
+
+##CHAOS
+STOPIF {LASTRESPAWNTEAM} = NineTailedFox
+STOPIF {RESPAWNEDPLAYERS} < 2
+PLAYERVAR SAVE {marauderP_elu} {RESPAWNEDPLAYERS} 1
+ADVSETROLE {marauderP_elu} ChaosMarauder FALSE
+PLAYERVAR DELETE {marauderP_elu}
+
+
+##grenadier
+GOTOIF Fin ({RESPAWNEDPLAYERS} < 3)
+grenadierAgain:
+PLAYERVAR SAVE {marauderP_grenadier} {RESPAWNEDPLAYERS} 1
+GOTOIF grenadierAgain ({SHOW:{marauderP_grenadier}:PLAYERID} = {marauderP_elu})
+BROADCASTPLAYER {marauderP_grenadier}  Tu es un <color=#0D7D35>Grenadier</color>\n Kaboom ? Kaboom !
+CUSTOMINFO SET {marauderP_grenadier} Grenadier
+ADVSETROLE {marauderP_grenadier} ChaosRifleman FALSE
+GIVE {marauderP_grenadier} 25 3 
+STOP
+
+NTF:
+## NTF
+WAITSEC 50
+WAITUNTIL {WAVERESPAWNING}
+
+STOPIF {LASTRESPAWNTEAM} = ChaosInsurgency
+STOPIF {RESPAWNEDPLAYERS} < 2
+
+
+PLAYERVAR SAVE {terroriste} {RESPAWNEDPLAYERS} 1
+
+SETROLE {terroriste} NtfSpecialist
+
+BROADCASTPLAYER {terroriste}  Tu es un <color=#f00>Terroriste</color>\n Kaboom ? Kaboom !
+# give 2 grenades
+GIVE {terroriste} 25 2
+CUSTOMINFO SET {terroriste} Terroriste
+
+
+
+
+
+
+
+
+
+Fin:
+STOP

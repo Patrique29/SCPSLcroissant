@@ -3,6 +3,8 @@ SAVE temps 5 + {CHANCE10}
 SAVE random {CHANCE100}
 SAVE random10 {CHANCE10}
 
+
+
 GOTOIF normal ({!WARHEADDETONATED})
 
 #nuke
