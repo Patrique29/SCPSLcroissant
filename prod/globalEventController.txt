@@ -31,7 +31,8 @@ systemMalfunction:
 BROADCAST 10 <u>Global event :</u> On dirai que les systèmes informatiques sont défaillant...
 EXECUTESCRIPT systemMalfunction
 
-GOTO Fin
+EXECUTESCRIPT SmallCP
+STOP
 
 roleHumain:
 BROADCASTPLAYER {SCPS} 10 <u>Global event :</u> Les humains ont un peut changé
@@ -39,31 +40,35 @@ BROADCASTPLAYER {HUMANS} 10 <u>Global event :</u> Les humains ont des roles spé
 #les broadcasts players sont dans le truc
 EXECUTESCRIPT changementDeRole
 LOG globalEvent_roleHumain
-GOTO Fin
+EXECUTESCRIPT SmallCP
+STOP
 
 roleSCP:
+LOG globalEvent_roleSCP
 BROADCASTPLAYER {HUMANS} 10 <u>Global event :</u> Le SCP a un peu changé
 BROADCASTPLAYER {SCPS} 10 <u>Global event :</u> Le SCP a un role spécial
+
+GOTOIF flot (SCP049 <= 0)
 EXECUTESCRIPT SmallCP
-LOG globalEvent_roleSCP
-GOTO Fin
+flot: 
+EXECUTESCRIPT paperDoc 
+STOP
 
 roleToutLeMonde:
 BROADCAST 10 <u>Global event :</u> Tout le monde a un peu changé. Yippee !!
 EXECUTESCRIPT changementDeRole
 EXECUTESCRIPT SmallCP
 LOG globalEvent_roleToutLeMonde
-GOTO Fin
+EXECUTESCRIPT SmallCP
+STOP
 
 randomSpawn:
 BROADCAST 10 <u>Global event :</u> Les spawns sont random bon courage
 EXECUTESCRIPT spawnAleatoire
 LOG globalEvent_SpawnAleatoire
-GOTO Fin
+EXECUTESCRIPT SmallCP
+STOP
 
 rien:
 BROADCAST 10 <u>Global event :</u> y'a r aujourd'hui
 LOG globalEvent_rien
-
-Fin:
-STOP

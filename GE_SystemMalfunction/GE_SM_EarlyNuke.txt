@@ -1,7 +1,7 @@
-#autonuke start once per game at a random time which is cancellable ( + normal autonuke which is NOT cancellable
+#autonuke start once per game at a random time which is cancellable + normal autonuke which is NOT cancellable
 
 IF ({GE_SM_EarlyNuke_isActivated} = 1)
-WAITSEC {RAND:{GE_SM_EarlyNuke_minTime}:{GE_SM_EarlyNuke_minTime}} 
+WAITSEC {RAND:GE_SM_EarlyNuke_minTime:GE_SM_EarlyNuke_minTime} 
 WARHEAD START
 IF ({GE_SM_EarlyNuke_canBeDisabled} = 0)
 WARHEAD LOCK

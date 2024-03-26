@@ -1,5 +1,6 @@
 ##The door,light,gate malfunction are more common + 
 #coef of the cooldown
+# OLD ONE FOR COMPATIBILITY ISSUE
 SAVE {systemMalfunction_Time} 0.75
 SAVE enableElevatorBug 0
 SAVE enableCheckPointBug 0
@@ -37,5 +38,5 @@ GOTOIF nuke ({enableCheckPointBug} = 0)
 
 
 nuke:
-
+EXECUTESCRIPT GE_SM_EarlyNuke
 STOP
