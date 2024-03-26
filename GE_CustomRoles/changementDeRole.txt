@@ -10,9 +10,12 @@ BROADCASTPLAYER {diabetique} 10 Tu as mangé le <color=#FFFF7C>crambleu aux pomm
 CUSTOMINFO SET {diabetique} diabétique
 LOG changementDeRole_diabetique_id = {SHOW:diabetique:PLAYERID}
 
+
+
 #Asthmatique
 #spawn avec un 1853
 #effect qui ralenti
+
 SAVE iAsthme 0
 PLAYERVAR SAVE {asthme} {HUMANS} 1
 asthmeAgain:

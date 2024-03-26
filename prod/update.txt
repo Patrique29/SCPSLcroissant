@@ -2,8 +2,8 @@
 #debug
 #WAITSEC 5
 
-
-WAITSEC (300 - {CHANCE100} + {CHANCE100})*{systemMalfunction_Time}
+SAVE {update_loop} ((300 - {CHANCE100} + {CHANCE100})*{systemMalfunction_Time})
+WAITSEC {update_loop}
 
 WAITUNTIL {!WARHEADCOUNTING}
 SAVE update_aleatoire100 ({CHANCE}*100)

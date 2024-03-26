@@ -1,5 +1,4 @@
-##The door,light,gate malfunction are more common + autonuke start once per game at a random time which is cancellable ( + normal autonuke which is NOT cancellable)
-
+##The door,light,gate malfunction are more common + 
 #coef of the cooldown
 SAVE {systemMalfunction_Time} 0.75
 SAVE enableElevatorBug 0
@@ -39,7 +38,4 @@ GOTOIF nuke ({enableCheckPointBug} = 0)
 
 nuke:
 
-#entre 3 et 25 min
-WAITSEC {RAND:180:1500} 
-BROADCAST 30 L'autonuke a été activer (elle est désactivable)
-WARHEAD START
+STOP

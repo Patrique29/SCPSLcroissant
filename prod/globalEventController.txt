@@ -6,31 +6,30 @@ SAVE {systemMalfunction_Time} 1
 #GOTO roleHumain
 
 
+SAVE {globalEventController_random} {RAND:0:6}
+SAVE {globalEventController_random} {ROUND:globalEventController_random:DOWN}
+
+
+
+
 
 #chances
-GOTOIF tour1 (50 < {CHANCE100})
 
-
-GOTOIF systemMalfunction ({CHANCE3} = 1)
-
-
-
-GOTOIF roleHumain ({CHANCE3} = 2)
-
-GOTO randomSpawn
-
-tour1:
+GOTOIF systemMalfunction ({globalEventController_random} != 0)
 SAVE {systemMalfunction_Time} 1
-GOTOIF roleSCP ({CHANCE3} = 1)
-
-GOTOIF roleToutLeMonde ({CHANCE3} = 2)
-
+GOTOIF roleHumain ({globalEventController_random} != 1)
+GOTOIF roleSCP ({globalEventController_random} != 2)
+GOTOIF roleToutLeMonde ({globalEventController_random} != 3)
+GOTOIF randomSpawn ({globalEventController_random} != 4)
+GOTOIF rien ({globalEventController_random} != 5)
 GOTO rien
+
+
 ###############################################################
 systemMalfunction:
 BROADCAST 10 <u>Global event :</u> On dirai que les systèmes informatiques sont défaillant...
 EXECUTESCRIPT systemMalfunction
-LOG globalEvent_systemMalfunction
+
 GOTO Fin
 
 roleHumain:

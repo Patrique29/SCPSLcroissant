@@ -1,0 +1,14 @@
+
+IF ({GE_SM_ClassD_isActivated} = 1)
+GOTOIF boom ({CHANCE100} > {GE_SM_ClassD_chanceBoom})
+
+LOG GE_SM_ClassD_normal
+DOOR OPEN PrisonDoor
+STOP
+
+boom:
+LOG GE_SM_ClassD_boom
+DOOR DESTROY PrisonDoor
+STOP
+
+
