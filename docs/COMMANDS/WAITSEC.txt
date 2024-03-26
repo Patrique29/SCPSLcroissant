@@ -1,0 +1,15 @@
+!-- HELPRESPONSE
+Auto Generated At: 26 March 2024 18:35
+Expires: 26 March 2024 18:40
+
++ WAITSEC +
+Yields execution of the script for the given number of seconds.
+Action type: Yielding
+Usage: WAITSEC <SECONDS>
+
+
+Arguments:
+<seconds>
+  Required: YES
+  Type: Float (Number)
+  The amount of seconds. Variables & Math are supported.

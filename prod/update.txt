@@ -1,8 +1,8 @@
 !-- LOOP
 #debug
 #WAITSEC 5
-
-SAVE {update_loop} ((300 - {CHANCE100} + {CHANCE100})*{systemMalfunction_Time})
+LOG update_systemMalfunction_Time = {systemMalfunction_Time}
+SAVE {update_loop} ((300 - {CHANCE100} + {CHANCE100}) * {ROUND:systemMalfunction_Time:DOWN})
 WAITSEC {update_loop}
 
 WAITUNTIL {!WARHEADCOUNTING}
@@ -17,14 +17,10 @@ GOTOIF doorStuck ({update_aleatoire100} > {update_condi})
 blackout:
 PRINT update_blackout
 EXECUTESCRIPT blackout
-GOTO Fin
+STOP
 
 doorStuck:
 GOTOIF blackout ({WARHEADDETONATED} OR {WARHEADCOUNTING})
 PRINT update_doorStuck
 EXECUTESCRIPT doorStuck
-GOTO Fin
-
-Fin:
-
 STOP

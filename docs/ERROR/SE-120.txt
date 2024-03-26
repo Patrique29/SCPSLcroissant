@@ -1,0 +1,8 @@
+!-- HELPRESPONSE
+Auto Generated At: 26 March 2024 18:27
+Expires: 26 March 2024 18:32
+
+=== ERROR CODE: SE-120 ===
+ID: 120
+Invalid {0} condition provided in the {1} action! Condition: {2} Error type: '{3}' Message: '{4}'.
+This error occurs when an action is executed successfully. However, a numerical parameter received a value that cannot be evaluated as numerical. This error can be resolved by replacing the specified parameter with a valid numerical value, or a valid mathematical formula.

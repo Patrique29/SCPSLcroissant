@@ -1,6 +1,8 @@
 ##Les events pour tout un round 
 ##wola g pa copié de mayhem
 SAVE {systemMalfunction_Time} 1
+LOG globalEventController_systemMalfunction_Time =  {systemMalfunction_Time}
+
 
 #test changementDeRole
 #GOTO roleHumain
@@ -16,7 +18,6 @@ SAVE {globalEventController_random} {ROUND:globalEventController_random:DOWN}
 #chances
 
 GOTOIF systemMalfunction ({globalEventController_random} != 0)
-SAVE {systemMalfunction_Time} 1
 GOTOIF roleHumain ({globalEventController_random} != 1)
 GOTOIF roleSCP ({globalEventController_random} != 2)
 GOTOIF roleToutLeMonde ({globalEventController_random} != 3)
