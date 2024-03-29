@@ -1,0 +1,28 @@
+!-- HELPRESPONSE
+Auto Generated At: 29 March 2024 10:16
+Expires: 29 March 2024 10:21
+
+=== VARIABLE ===
+Name: {INDEX}
+Description: Can get a certain thing from your variable.
+Stores Players: NO
+Usage: {INDEX:VARIABLE:INDEX:LISTSPLITCHAR}
+Variable Type: String (Text)
+
+Arguments:
+
+<variable>
+  Required: YES
+  Type: Variable
+  The name of the variable.
+
+<index>
+  Required: YES
+  Type: Int (Whole Number)
+  The place from which the value should be taken.
+
+[listSplitChar]
+  Required: NO
+  Type: Character
+  A character that will split the variable into a list.
+

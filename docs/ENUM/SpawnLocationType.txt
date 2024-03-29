@@ -1,0 +1,37 @@
+!-- HELPRESPONSE
+Auto Generated At: 28 March 2024 15:20
+Expires: 28 March 2024 15:25
+
+=== ENUM ===
+Name: SpawnLocationType
+The list of valid in-game spawn location types.
+
+Options:
+0 - Inside330
+1 - Inside330Chamber
+3 - Inside049Armory
+4 - Inside079Secondary
+5 - Inside096
+6 - Inside173Armory
+7 - Inside173Bottom
+8 - Inside173Connector
+9 - InsideEscapePrimary
+10 - InsideEscapeSecondary
+11 - InsideIntercom
+12 - InsideLczArmory
+13 - InsideLczCafe
+14 - InsideNukeArmory
+15 - InsideSurfaceNuke
+16 - Inside079First
+17 - Inside173Gate
+18 - Inside914
+19 - InsideGateA
+20 - InsideGateB
+21 - InsideGr18
+22 - InsideHczArmory
+23 - InsideHid
+24 - InsideHidLeft
+25 - InsideHidRight
+26 - InsideLczWc
+27 - InsideServersBottom
+28 - InsideLocker

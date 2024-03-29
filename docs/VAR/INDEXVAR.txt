@@ -1,0 +1,23 @@
+!-- HELPRESPONSE
+Auto Generated At: 29 March 2024 10:18
+Expires: 29 March 2024 10:23
+
+=== VARIABLE ===
+Name: {INDEXVAR}
+Description: Indexes a player variable and gets ONE player at the specified position.
+Stores Players: YES
+Usage: {INDEXVAR:NAME:TYPE}
+Variable Type: Numerical
+
+Arguments:
+
+<name>
+  Required: YES
+  Type: Player Variable
+  The name of the variable to index.
+
+<type>
+  Required: YES
+  Type: Int (Whole Number)
+  The index. Number variables can be used (if they are decimal, the decimal portion will be removed)
+

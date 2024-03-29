@@ -1,0 +1,20 @@
+!-- HELPRESPONSE
+Auto Generated At: 28 March 2024 15:22
+Expires: 28 March 2024 15:27
+
++ TPSPAWN +
+Teleports players to the specified SpawnLocationType.
+Action type: Player
+Usage: TPSPAWN <PLAYERS> <SPAWN>
+
+
+Arguments:
+<players>
+  Required: YES
+  Type: Player List
+  The players to teleport
+
+<spawn>
+  Required: YES
+  Type: SpawnLocationType
+  The spawn to teleport to.

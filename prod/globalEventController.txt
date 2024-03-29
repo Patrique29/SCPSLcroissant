@@ -1,15 +1,14 @@
 ##Les events pour tout un round 
 ##wola g pa copié de mayhem
 SAVE {systemMalfunction_Time} 1
-LOG globalEventController_systemMalfunction_Time =  {systemMalfunction_Time}
-
 
 #test changementDeRole
 #GOTO roleHumain
 
 
 SAVE {globalEventController_random} {RAND:0:6}
-SAVE {globalEventController_random} {ROUND:globalEventController_random:DOWN}
+LOG globalEventController_random = {globalEventController_random}
+SAVE {globalEventController_random} {ROUND:globalEventController_random:UP}
 
 
 
@@ -17,7 +16,7 @@ SAVE {globalEventController_random} {ROUND:globalEventController_random:DOWN}
 
 #chances
 
-GOTOIF systemMalfunction ({globalEventController_random} != 0)
+#GOTOIF systemMalfunction ({globalEventController_random} != 0)
 GOTOIF roleHumain ({globalEventController_random} != 1)
 GOTOIF roleSCP ({globalEventController_random} != 2)
 GOTOIF roleToutLeMonde ({globalEventController_random} != 3)
@@ -50,6 +49,7 @@ BROADCASTPLAYER {SCPS} 10 <u>Global event :</u> Le SCP a un role spécial
 
 GOTOIF flot (SCP049 <= 0)
 EXECUTESCRIPT SmallCP
+STOP
 flot: 
 EXECUTESCRIPT paperDoc 
 STOP

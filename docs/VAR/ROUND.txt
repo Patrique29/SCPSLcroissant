@@ -1,0 +1,23 @@
+!-- HELPRESPONSE
+Auto Generated At: 26 March 2024 20:30
+Expires: 26 March 2024 20:35
+
+=== VARIABLE ===
+Name: {ROUND}
+Description: Returns a rounded number.
+Stores Players: NO
+Usage: {ROUND:VARIABLE:MODE}
+Variable Type: Numerical
+
+Arguments:
+
+<variable>
+  Required: YES
+  Type: Numerical Variable
+  The name of the variable to round. Requires the variable to be a number.
+
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  Way of rounding the variable, either UP or DOWN.
+

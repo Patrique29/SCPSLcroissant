@@ -16,11 +16,12 @@ SAVE {GE_CR_diabetiqueIsEnable} 1
 
 
 ###System Malfunction
-##D-Class Cells 
+##D-Class Cells explosion 
 #is activated (1 = true, 0 = false) (default:1)
 SAVE {GE_SM_ClassD_isActivated} 1
 #the chance that the d-class cells' doors explodes when the systemMalfunction GE (%) (default:25)
-SAVE {GE_SM_ClassD_chanceBoom} 25
+#TW : earrape
+SAVE {GE_SM_ClassD_chanceBoom} 5
 
 
 ##EarlyNuke
@@ -28,13 +29,14 @@ SAVE {GE_SM_ClassD_chanceBoom} 25
 SAVE {GE_SM_EarlyNuke_isActivated} 1
 #Can be disabled by pressing the button in HCZ (1 = true, 0 false) (default:1)
 SAVE {GE_SM_EarlyNuke_canBeDisabled} 1
-#
+#the minimum time the nuke can go off (it's random)
 SAVE {GE_SM_EarlyNuke_minTime} 180
-#
+# the maximum time
 SAVE {GE_SM_EarlyNuke_maxTime} 1500
 
 
 ##Bugs
+
 #Checkpoint bug:
 #Is activated (1 = true, 0 = false) (default:1)
 SAVE {GE_SM_CKPT_isActivated} 1

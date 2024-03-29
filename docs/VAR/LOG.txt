@@ -1,0 +1,18 @@
+!-- HELPRESPONSE
+Auto Generated At: 29 March 2024 10:16
+Expires: 29 March 2024 10:21
+
+=== VARIABLE ===
+Name: {LOG}
+Description: Shows the name of the variable with its value. Useful for quick debugging.
+Stores Players: NO
+Usage: {LOG:VARIABLE}
+Variable Type: String (Text)
+
+Arguments:
+
+<variable>
+  Required: YES
+  Type: Variable
+  The name of the variable.
+

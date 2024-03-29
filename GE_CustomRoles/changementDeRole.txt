@@ -54,6 +54,8 @@ CUSTOMINFO SET {enfant} Enfant
 
 scientist:
 
+GOTOIF zoneManager ({CHANCE100} >= 50)
+
 # Scientist
 #Gamble addict
 #- t'as trade ton kit de soin et ta carte contre 4 pieces
@@ -64,7 +66,7 @@ CLEARINVENTORY {gamble}
 #give 4 coins
 GIVE {gamble} 35 4
 LOG changementDeRole_gamble_id = {SHOW:asthme:PLAYERID}
-
+GOTO guard
 
 zoneManager:
 #Zone Manager
@@ -140,7 +142,3 @@ Fin:
 
 #MTF Micro
 #commence avec un micro vide
-#
-
-#MTF Terroriste
-

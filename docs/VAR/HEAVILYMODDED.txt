@@ -1,0 +1,11 @@
+!-- HELPRESPONSE
+Auto Generated At: 29 March 2024 10:14
+Expires: 29 March 2024 10:19
+
+=== VARIABLE ===
+Name: {HEAVILYMODDED}
+Description: Whether or not this server is heavily modded.
+Stores Players: NO
+Usage: {HEAVILYMODDED}
+Variable Type: Boolean (true/false)
+

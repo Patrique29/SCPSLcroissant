@@ -1,0 +1,11 @@
+!-- HELPRESPONSE
+Auto Generated At: 29 March 2024 10:17
+Expires: 29 March 2024 10:22
+
+=== VARIABLE ===
+Name: {CUSTOMROLE}
+Description: The amount of CustomRole alive.
+Stores Players: YES
+Usage: {CUSTOMROLE}
+Variable Type: Numerical
+
