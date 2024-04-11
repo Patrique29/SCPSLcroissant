@@ -1,0 +1,6 @@
+IF ({SENDER} != {SCP939})
+IF ({ultraDogIsOn} = 1)
+RESKIN {SCP939} 8
+BROADCASTPLAYER {SCP939} 5 Tu ressembles maintenant à un <color=#008F1E>Chaos</color>
+
+STOP

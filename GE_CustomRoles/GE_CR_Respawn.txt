@@ -1,0 +1,8 @@
+start:
+WAITUNTIL {WAVERESPAWNING}
+WAITSEC 5
+
+
+
+
+GOTO start:

@@ -1,6 +1,11 @@
 # SCPSLcroissant
 
 
+Some convention i made up :
+Local variable : nameOfTheFile_nameOfTheVariable  
+
+The folders start with
+
 
 ## Global Events
 

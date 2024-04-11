@@ -1,0 +1,5 @@
+STOPIF ({SENDER} != {SCP939})
+IF ({ultraDogIsOn} = 1)
+RESKIN {SCP939} 16
+BROADCASTPLAYER {SCPS} 10 Tu ressembles maintenant à <color=#EC2121>SCP-939</color>
+STOP

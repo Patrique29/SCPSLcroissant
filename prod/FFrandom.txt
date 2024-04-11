@@ -1,0 +1,9 @@
+GOTOIF off ({CHANCE100} >= 50)
+COMMAND /setconfig friendly_fire true
+LOG FFrandom_on
+STOP
+
+off: 
+COMMAND /setconfig friendly_fire false
+LOG FFrandom_off
+STOP

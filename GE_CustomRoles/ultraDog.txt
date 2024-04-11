@@ -1,8 +1,10 @@
-!-- LOOP
-##Ultra Sensitive Dog
-##Can detect event in the facility (914,Nuke armed..)
+!-- NOSAFETY
+#Ultra Sensitive Dog
+#Can detect event in the facility (914,Nuke armed..)
 #USE {INROOM} (peanut, gates, checkpoints)
 
-WAITSEC 5
-HINTPLAYER {SCP939} 5 <align="right"><color=red><size=75%>peoples on Surface : {SURFACE} <br> peoples in Entrance : {EZ} <br> peoples in Heavy : {HCZ} <br>  peoples in Light : {LCZ} <br> <br> is 914 active : {SCP914ACTIVE}  <br> Nuke Armed : {WARHEADARMED} <br> Nuke Open in Surface : {WARHEADOPENED} </size></color></align>
 
+again:
+WAITSEC 5
+HINTPLAYER {SCP939} 5.5 <align="right"><color=red><size=75%>peoples on Surface : {SURFACE} <br> peoples in Entrance : {EZ} <br> peoples in Heavy : {HCZ} <br>  peoples in Light : {LCZ} <br> <br> is 914 active : {SCP914ACTIVE}  <br> Nuke Armed : {WARHEADARMED} <br> Nuke Open in Surface : {WARHEADOPENED} </size></color></align>
+GOTO again

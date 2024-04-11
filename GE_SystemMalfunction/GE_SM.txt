@@ -1,6 +1,5 @@
 
 SAVE {systemMalfunction_Time} 0.75
 LOG globalEvent_systemMalfunction
-BROADCAST 10 <u>Global event :</u> On dirai que les systèmes informatiques sont défaillant...
 EXECUTESCRIPT GE_SM_ClassD
 EXECUTESCRIPT GE_SM_EarlyNuke

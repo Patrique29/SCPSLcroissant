@@ -1,0 +1,33 @@
+#set the roles for the d-boi
+PLAYERVAR SAVE {noRolesClassD} {CLASSD}
+
+
+
+#enfant
+GOTOIF next1 ({GE_CR_ClassD_isEnfantActivated} = 0)
+PLAYERVAR SAVE {GE_CR_ClassD_enfant} {noRolesClassD} {GE_CR_ClassD_nbEnfant}
+BROADCASTPLAYER {GE_CR_ClassD_enfant} 10 Tu es un <color=#FFC0CB>Enfant</color> \ndo not the kid \ntu commences avec un bonbon arc-en-ciel \n t'es un peu plus petit que la normal
+CUSTOMINFO SET {GE_CR_ClassD_enfant} enfant
+PLAYERVAR REMOVE {noRolesClassD} {GE_CR_ClassD_enfant}
+
+SIZE {GE_CR_ClassD_enfant} 1 0.75 1
+
+next1:
+GOTOIF next2 ({GE_CR_ClassD_isPetitFilsActivated} = 0 || {SCP106} = 0)
+PLAYERVAR SAVE {GE_CR_ClassD_petitFils} {noRolesClassD} {GE_CR_ClassD_nbPetitFils}
+PLAYERDATA SET {GE_CR_ClassD_petitFils} srole petitfils
+#no custom info
+ADVSETROLE {GE_CR_ClassD_petitFils} 14 FALSE FALSE 
+RESKIN {GE_CR_ClassD_petitFils} 1
+
+BROADCASTPLAYER {GE_CR_ClassD_petitFils} 10 Tu es le <color=#EC2121>petit fils</color> de papy \ncollabore avec lui pour t'assuré la victoire \nreste caché ! personne d'autre que lui sait que tu es avec lui \ntu ne peux pas t'échappé !
+
+
+
+
+
+
+
+next2:
+
+STOP

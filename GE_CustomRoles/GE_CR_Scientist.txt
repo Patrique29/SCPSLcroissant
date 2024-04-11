@@ -1,0 +1,37 @@
+#set the roles for the science team
+PLAYERVAR SAVE {noRolesScientist} {SCIENTIST}
+
+
+
+#Zone Manager
+GOTOIF next1 ({GE_CR_Scientist_isZoneManagerActivated} = 0)
+PLAYERVAR SAVE {GE_CR_Scientist_zoneManager} {noRolesScientist} {GE_CR_Scientist_nbZoneManager}
+PLAYERDATA SET {GE_CR_Scientist_zoneManager} srole zoneManager
+BROADCASTPLAYER {zoneManager} 10 Tu es un <color=#0d7979>Zone Manager</color> \nT'as une carte de zone manager (d'où le nom) \nTu commences à heavy \nBon courage...
+CUSTOMINFO SET {GE_CR_Scientist_zoneManager} zone Manager
+PLAYERVAR REMOVE {noRolesScientist} {GE_CR_Scientist_zoneManager}
+
+CLEARINVENTORY {GE_CR_Scientist_zoneManager}
+#give kit
+GIVE {GE_CR_Scientist_zoneManager} 14
+#give adrenaline
+GIVE {GE_CR_Scientist_zoneManager} 33
+#give zone manager card
+GIVE {GE_CR_Scientist_zoneManager} 3
+TPROOM {GE_CR_Scientist_zoneManager} {RANDOMROOM:HeavyContainment}
+
+next1:
+#Gamble Addict
+GOTOIF next2 ({GE_CR_Scientist_isGambleActivated} = 0)
+PLAYERVAR SAVE {GE_CR_Scientist_gamble} {noRolesScientist} {GE_CR_Scientist_nbGamble}
+PLAYERDATA SET {GE_CR_Scientist_gamble} srole gamble
+BROADCASTPLAYER {GE_CR_Scientist_gamble} 10 Tu es un <color=#FFFF7C>Gamble Addict</color> \nT'as trade ton kit et ta carte contre 4 pièces \nfais en bon usage
+CUSTOMINFO SET {GE_CR_Scientist_gamble} Gamble Addict
+PLAYERVAR REMOVE {noRolesScientist} {GE_CR_Scientist_gamble}
+
+CLEARINVENTORY {GE_CR_Scientist_gamble}
+#give 4 coins
+GIVE {GE_CR_Scientist_gamble} 35 4
+
+next2:
+STOP

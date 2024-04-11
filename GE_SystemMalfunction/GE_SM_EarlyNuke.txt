@@ -1,7 +1,7 @@
 #autonuke start once per game at a random time which is cancellable + normal autonuke which is NOT cancellable
 
-IF ({GE_SM_EarlyNuke_isActivated} = 1)
+STOPIF ({GE_SM_EarlyNuke_isActivated} = 0)
 WAITSEC {RAND:180:1500} 
 WARHEAD START
-IF ({GE_SM_EarlyNuke_canBeDisabled} = 0)
+STOPIF ({GE_SM_EarlyNuke_canBeDisabled} = 1)
 WARHEAD LOCK

@@ -1,4 +1,4 @@
-##smol = 0.5 hp + 2 faster + and smoller
+#smol = 0.5 hp + 2 faster + and smoller
 
 BROADCASTPLAYER {SCPS} 20 Global event : u smol
 

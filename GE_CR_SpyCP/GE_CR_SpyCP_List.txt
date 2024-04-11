@@ -1,0 +1,1 @@
+BROADCASTPLAYER {SENDER} 10 .peanut, .chaos, .scientist, .classd, .dog

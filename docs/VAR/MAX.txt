@@ -1,0 +1,23 @@
+!-- HELPRESPONSE
+Auto Generated At: 07 April 2024 13:16
+Expires: 07 April 2024 13:21
+
+=== VARIABLE ===
+Name: {MAX}
+Description: Filters a player variable and returns random players less than the provided amount.
+Stores Players: YES
+Usage: {MAX:NAME:AMOUNT}
+Variable Type: Numerical
+
+Arguments:
+
+<name>
+  Required: YES
+  Type: Player Variable
+  The name of the variable to select from.
+
+[amount]
+  Required: NO
+  Type: Int (Whole Number)
+  The amount of players to select (default: 1)
+

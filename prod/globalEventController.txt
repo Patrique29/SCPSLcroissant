@@ -1,73 +1,68 @@
-##Les events pour tout un round 
-##wola g pa copié de mayhem
+#Les events pour tout un round 
+#wola g pa copié de mayhem
 SAVE {systemMalfunction_Time} 1
 
-#test changementDeRole
+#test GE_CR
 #GOTO roleHumain
 
 
-SAVE {globalEventController_random} {RAND:0:6}
+SAVE {globalEventController_random} {RAND:1:8}
 LOG globalEventController_random = {globalEventController_random}
-SAVE {globalEventController_random} {ROUND:globalEventController_random:UP}
-
+SAVE {globalEventController_random} {ROUND:globalEventController_random:DOWN}
 
 
 
 
 #chances
 
-#GOTOIF systemMalfunction ({globalEventController_random} != 0)
-GOTOIF roleHumain ({globalEventController_random} != 1)
-GOTOIF roleSCP ({globalEventController_random} != 2)
-GOTOIF roleToutLeMonde ({globalEventController_random} != 3)
-GOTOIF randomSpawn ({globalEventController_random} != 4)
-GOTOIF rien ({globalEventController_random} != 5)
-GOTO rien
+GOTOIF systemMalfunction ({globalEventController_random} = 1)
+GOTOIF roleHumain ({globalEventController_random} = 2)
+GOTOIF roleSCP ({globalEventController_random} = 3)
+GOTOIF roleToutLeMonde ({globalEventController_random} = 4)
+GOTOIF randomSpawn ({globalEventController_random} = 5)
+GOTOIF speed ({globalEventController_random} = 6)
+GOTOIF rien ({globalEventController_random} = 7)
 
-
-###############################################################
+STOP
 systemMalfunction:
 BROADCAST 10 <u>Global event :</u> On dirai que les systèmes informatiques sont défaillant...
 EXECUTESCRIPT systemMalfunction
 
-EXECUTESCRIPT SmallCP
 STOP
 
 roleHumain:
-BROADCASTPLAYER {SCPS} 10 <u>Global event :</u> Les humains ont un peut changé
-BROADCASTPLAYER {HUMANS} 10 <u>Global event :</u> Les humains ont des roles spéciaux
+BROADCASTPLAYER {SCPS} 10 <u>Global event :</u> Les humains ont un peu changé
+BROADCASTPLAYER {HUMANS} 10 <u>Global event :</u> Les humains ont des rôles spéciaux
 #les broadcasts players sont dans le truc
-EXECUTESCRIPT changementDeRole
+EXECUTESCRIPT GE_CR
 LOG globalEvent_roleHumain
-EXECUTESCRIPT SmallCP
 STOP
 
 roleSCP:
 LOG globalEvent_roleSCP
 BROADCASTPLAYER {HUMANS} 10 <u>Global event :</u> Le SCP a un peu changé
 BROADCASTPLAYER {SCPS} 10 <u>Global event :</u> Le SCP a un role spécial
-
-GOTOIF flot (SCP049 <= 0)
-EXECUTESCRIPT SmallCP
-STOP
-flot: 
-EXECUTESCRIPT paperDoc 
+EXECUTESCRIPT GE_CR_SCPs
 STOP
 
 roleToutLeMonde:
 BROADCAST 10 <u>Global event :</u> Tout le monde a un peu changé. Yippee !!
-EXECUTESCRIPT changementDeRole
-EXECUTESCRIPT SmallCP
+EXECUTESCRIPT GE_CR
+EXECUTESCRIPT GE_CR_SCPs
 LOG globalEvent_roleToutLeMonde
-EXECUTESCRIPT SmallCP
 STOP
 
 randomSpawn:
 BROADCAST 10 <u>Global event :</u> Les spawns sont random bon courage
 EXECUTESCRIPT spawnAleatoire
 LOG globalEvent_SpawnAleatoire
-EXECUTESCRIPT SmallCP
 STOP
+
+speed:
+BROADCAST 10 <u>Global event :</u> gas gas gas !
+EXECUTESCRIPT GE_O_speed
+LOG globalEvent_speed
+
 
 rien:
 BROADCAST 10 <u>Global event :</u> y'a r aujourd'hui

@@ -1,0 +1,25 @@
+!-- HELPRESPONSE
+Auto Generated At: 07 April 2024 15:54
+Expires: 07 April 2024 15:59
+
++ CALL +
+Moves to the provided label or executes a script.
+Action type: Logic
+Usage: CALL <MODE> <DESTINATION> [VARS]
+
+
+Arguments:
+<mode>
+  Required: YES
+  Type: String (Message/Text)
+  The mode to use. Either LABEL or SCRIPT.
+
+<destination>
+  Required: YES
+  Type: String (Message/Text)
+  The target of this action. Dictated by the mode selected.
+
+[vars]
+  Required: NO
+  Type: String (Message/Text)
+  The variables to create for a called script. Seperate variables with spaces to create multiple. Used only for the SCRIPT mode.

@@ -1,0 +1,15 @@
+!-- HELPRESPONSE
+Auto Generated At: 08 April 2024 09:32
+Expires: 08 April 2024 09:37
+
+=== ENUM ===
+Name: ZoneType
+The list of valid in-game zones.
+
+Options:
+0 - Unspecified
+1 - LightContainment
+2 - HeavyContainment
+4 - Entrance
+8 - Surface
+16 - Other

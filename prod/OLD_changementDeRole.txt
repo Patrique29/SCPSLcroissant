@@ -2,8 +2,13 @@
 #Special roles for all players
 SAVE isChangementDeRoleActive 1
 
+
+
 #all humans
 
+
+#diabetique
+#spawn avec l'effet de 207
 PLAYERVAR SAVE {diabetique} {HUMANS} 1
 EFFECT GIVE {diabetique} Scp207 1
 BROADCASTPLAYER {diabetique} 10 Tu as mangé le <color=#FFFF7C>crambleu aux pommes</color> de Maël \nT'as autant de sucre dans le sang que quelqu'un qui a bu un SCP-207

@@ -1,0 +1,59 @@
+#set the sub-roles for all the humans
+
+
+PLAYERVAR SAVE {noGlobalRoles} {HUMANS}
+
+#template to create a new global role
+#GOTOIF nextNumber ({isNameOfTheRoleActivated} = 0)
+#PLAYERVAR SAVE {GE_CR_Humans_nameOfTheRole} {noGlobalRoles} numberOfPeopleWhoWillHaveTheRole
+#PLAYERDATA SET {GE_CR_Humans_nameOfTheRole} sroleg nameOfTheRole
+#BROADCASTPLAYER {GE_CR_Humans_nameOfTheRole} 10 Description of the role
+#PLAYERVAR REMOVE {noGlobalRoles} {GE_CR_Humans_nameOfTheRole}
+#CUSTOMINFO SET {GE_CR_Humans_nameOfTheRole} nameOfTheRole
+#
+# 		the effect of the roles
+#
+#nextn:
+
+
+
+
+GOTOIF next1 ({GE_CR_Humans_isDiabetiqueActivated} = 0)
+PLAYERVAR SAVE {GE_CR_Humans_diabetique} {noGlobalRoles} {GE_CR_Humans_nbDiabetique}
+PLAYERDATA SET {GE_CR_Humans_diabetique} sroleg diabetique
+BROADCASTPLAYER {GE_CR_Humans_diabetique} 10 Tu as mangé le <color=#FFFF7C>crambleu aux pommes</color> de Maël \nT'as autant de sucre dans le sang que quelqu'un qui a bu un SCP-207
+CUSTOMINFO SET {GE_CR_Humans_diabetique} diabétique
+PLAYERVAR REMOVE {noGlobalRoles} {GE_CR_Humans_diabetique}
+
+EFFECT GIVE {GE_CR_Humans_diabetique} Scp207 1
+
+next1:
+GOTOIF next2 ({isAsthmatiqueActivated} = 0)
+PLAYERVAR SAVE {GE_CR_Humans_Asthmatique} {noGlobalRoles} {GE_CR_Humans_nbAsthmatique}
+PLAYERDATA SET {GE_CR_Humans_Asthmatique} sroleg asthmatique
+BROADCASTPLAYER {GE_CR_Humans_Asthmatique} 10 Tu es <color=#BFFF00>asthmatique</color>\nT'as stamina est réduit de moitié\nMais tu vises mieux
+CUSTOMINFO SET {GE_CR_Humans_Asthmatique} Asthmatique
+PLAYERVAR REMOVE {noGlobalRoles} {GE_CR_Humans_Asthmatique}
+
+EFFECT GIVE {GE_CR_Humans_Asthmatique} SCP1853 1
+EFFECT GIVE {GE_CR_Humans_Asthmatique} Exhausted 1
+
+
+
+next2:
+
+
+GOTOIF next3 ({GE_CR_Humans_isRianActivated} = 0)
+PLAYERVAR SAVE {GE_CR_Humans_rian} {noGlobalRoles} {GE_CR_Humans_nbRian}
+PLAYERDATA SET {GE_CR_Humans_rian} sroleg rian
+BROADCASTPLAYER {GE_CR_Humans_rian} 10 Tu es <color=#a3a251>vieux présentateur</color>\nTu commences à Intercom mais tu sais plus trop pourquoi
+CUSTOMINFO SET {GE_CR_Humans_rian} Vieux présentateur
+PLAYERVAR REMOVE {noGlobalRoles} {GE_CR_Humans_rian}
+TPROOM {GE_CR_Humans_rian} EzIntercom
+
+
+EXECUTESCRIPT GE_CR_Rian
+
+next3:
+
+STOP

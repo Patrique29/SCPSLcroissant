@@ -1,0 +1,25 @@
+!-- HELPRESPONSE
+Auto Generated At: 07 April 2024 15:46
+Expires: 07 April 2024 15:51
+
++ GOTOIF +
+Moves to the provided label if the condition evaluates to TRUE.
+Action type: Logic
+Usage: GOTOIF <LABEL> <CONDITION>
+
+The following keywords can be used in place of a label:
+- START - Moves to the start of the script.
+- STOP - Immediately stops the script.
+- NEXT - Moves to the next line.
+
+
+Arguments:
+<label>
+  Required: YES
+  Type: String (Message/Text)
+  The label to jump to. Variables are supported.
+
+<condition>
+  Required: YES
+  Type: String (Message/Text)
+  The condition to check. Variables & Math are supported.

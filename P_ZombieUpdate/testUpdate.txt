@@ -1,0 +1,21 @@
+
+
+start:
+
+SAVE {testI} {SCP0492}
+LOG testI = {testI}
+
+WAITUNTIL ({testI} != {SCP0492})
+
+GOTOIF start ({testI} > {SCP0492})
+
+PLAYERVAR SAVE {ZU_zombar} {SCP0492} 1
+
+
+#give a card
+GIVE {ZU_zombar} 2 1
+COMMAND /forceeq {C:ZU_zombar} 2
+
+#do stuff
+
+GOTO start

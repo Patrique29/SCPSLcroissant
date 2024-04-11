@@ -1,4 +1,4 @@
-##The door,light,gate malfunction are more common + 
+#The door,light,gate malfunction are more common + 
 #coef of the cooldown
 # OLD ONE FOR COMPATIBILITY ISSUE
 SAVE {systemMalfunction_Time} 0.75
@@ -6,7 +6,7 @@ SAVE enableElevatorBug 0
 SAVE enableCheckPointBug 0
 
 
-##enable the elevator bug
+#enable the elevator bug
 GOTOIF nuke ({enableElevatorBug} = 0)
 GOTOIF gateB ({CHANCE100} > 50)
 ELEVATOR LOCK GateA
@@ -31,7 +31,7 @@ SAVE systemMalfunction_LczElevatorA 0
 
 
 checkpoint:
-##enable the checkpoint bug
+#enable the checkpoint bug
 GOTOIF nuke ({enableCheckPointBug} = 0)
 
 

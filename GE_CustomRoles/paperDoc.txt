@@ -1,7 +1,0 @@
-##Paper doctor
-
-STOPIF ({SCP049} <= 0)
-SIZE {SCP049} 0.01 1 1
-BROADCASTPLAYER {SCP049} 10 Tu es un <color=#F00>Paper doctor</color> \nu wahoo!
-
-STOP

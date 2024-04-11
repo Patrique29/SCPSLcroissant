@@ -1,6 +1,6 @@
 !-- HELPRESPONSE
-Auto Generated At: 28 January 2024 12:18
-Expires: 28 January 2024 12:23
+Auto Generated At: 07 April 2024 13:12
+Expires: 07 April 2024 13:17
 
 === VARIABLES ===
 The following variables can all be used in conditions, such as IF, GOTOIF, WAITUNTIL, etc. Additionally, each RoleType has its own variable (eg. {NTFCAPTAIN}).
@@ -159,4 +159,35 @@ An asterisk [*] before the name of a variable indicates it also stores players, 
 
 + Script Defined +
 These variables are defined by a script. These variables can be used in any script and are erased when the round restarts.
-None
+{blackout_temps}
+{GE_CR_diabetiqueIsEnable}
+{GE_SM_CKPT_frequency}
+{GE_SM_CKPT_isActivated}
+{GE_SM_CKPT_minCooldown}
+{GE_SM_ClassD_chanceBoom}
+{GE_SM_ClassD_isActivated}
+{GE_SM_EarlyNuke_canBeDisabled}
+{GE_SM_EarlyNuke_isActivated}
+{GE_SM_EarlyNuke_maxTime}
+{GE_SM_EarlyNuke_minTime}
+{GE_SM_Elev_isActivated}
+{GE_SM_Elev_maxCooldown}
+{GE_SM_Elev_minCooldown}
+{globalEventController_random}
+{i}
+{iAsthme}
+{isChangementDeRoleActive}
+{random}
+{random10}
+{systemMalfunction_Time}
+{temps}
+{tempsLockdown}
+{update_aleatoire100}
+{update_condi}
+{update_loop}
+[*] {asthme}
+[*] {diabetique}
+[*] {enfant}
+[*] {gamble}
+[*] {headGuard}
+[*] {truc1}

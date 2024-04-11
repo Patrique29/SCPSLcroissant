@@ -1,4 +1,4 @@
-##when kill doc fast
+#when kill doc fast
 
 BROADCASTPLAYER {SCP049} 10 Tu es un <color=#FFFF7C>Docteur militaire</color> \nPlus t'as de zombie + tu vas vite
 

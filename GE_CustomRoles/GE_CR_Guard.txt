@@ -1,0 +1,38 @@
+#set the roles for the best role in the game
+PLAYERVAR SAVE {noRolesGuard} {GUARDS}
+
+
+
+#Garde de 914
+GOTOIF next1 ({GE_CR_Guard_is914Activated} = 0)
+PLAYERVAR SAVE {GE_CR_Guard_914} {noRolesGuard} {GE_CR_Guard_nb914}
+PLAYERDATA SET {GE_CR_Guard_914} srole 914 
+BROADCASTPLAYER {GE_CR_Guard_914} 10 Tu es <b>Le</b> <color=#6B6B38>garde de SCP-914</color> \nTu commences à 914 \nmais on a volé ta carte \net ntm aussi
+CUSTOMINFO SET {GE_CR_Guard_914} Garde de 914
+PLAYERVAR REMOVE {noRolesGuard} {GE_CR_Guard_914}
+
+TPROOM {GE_CR_Guard_914} Lcz914
+#remove guard card
+REMOVEITEM {GE_CR_Guard_914} 4
+
+
+next1:
+#head of guards
+GOTOIF next2 ({GE_CR_Guard_isHeadctivated} = 0)
+PLAYERVAR SAVE {GE_CR_Guard_head} {noRolesGuard} {GE_CR_Guard_nbHead}
+PLAYERDATA SET {GE_CR_Guard_head} srole head
+BROADCASTPLAYER {GE_CR_Guard_head} 10 Tu es un <color=#70C3FF>Chef des gardes du site</color> \nT'as une carte de private \net un crossvec
+CUSTOMINFO SET {GE_CR_Guard_head} Chef des gardes
+PLAYERVAR REMOVE {noRolesGuard} {GE_CR_Guard_head}
+
+#remove guard card
+REMOVEITEM {GE_CR_Guard_head} 4
+#remove FSP9
+REMOVEITEM {GE_CR_Guard_head} 23
+#give private card
+GIVE {GE_CR_Guard_head} 5
+#give crossvec
+GIVE {GE_CR_Guard_head} 21 
+
+next2:
+STOP

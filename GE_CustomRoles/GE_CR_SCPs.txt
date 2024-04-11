@@ -1,4 +1,81 @@
 
 #set the roles for the SCPs
+SAVE {GE_CR_SCPs_randomdoc} {RAND:0:3}
+SAVE {GE_CR_SCPs_randomdoc} {ROUND:GE_CR_SCPs_randomdoc:DOWN}
+SAVE {GE_CR_SCPs_randompapy} {RAND:0:3}
+SAVE {GE_CR_SCPs_randompapy} {ROUND:GE_CR_SCPs_randompapy:DOWN}
+SAVE {GE_CR_SCPs_randompeanut} {RAND:0:3}
+SAVE {GE_CR_SCPs_randompeanut} {ROUND:GE_CR_SCPs_randompeanut:DOWN}
+SAVE {GE_CR_SCPs_randomdog} {RAND:0:1}
+SAVE {GE_CR_SCPs_randomdog} {ROUND:GE_CR_SCPs_randomdog:DOWN}
+
+LOG GE_CR_SCPs_randomdoc = {GE_CR_SCPs_randomdoc}
+LOG GE_CR_SCPs_randompapy = {GE_CR_SCPs_randompapy}
+LOG GE_CR_SCPs_randompeanut = {GE_CR_SCPs_randompeanut}
+LOG GE_CR_SCPs_randomdog = {GE_CR_SCPs_randomdog}
+
+GOTOIF papy ({SCP049} = 0)
 
 
+
+GOTOIF smoldoc ({GE_CR_SCPs_randomdoc} != 0)
+GOTOIF paperdoc({GE_CR_SCPs_randomdoc} != 1)
+GOTOIF papy ({GE_CR_SCPs_randomdoc} != 2)
+
+#SMALL SCP
+smoldoc:
+BROADCASTPLAYER {SCP049} 20 Global event : u smol
+SIZE {SCP049} 1 0.75 1
+GOTO papy
+
+#PAPER DOC
+paperdoc:
+SIZE {SCP049} 0.01 1 1
+BROADCASTPLAYER {SCP049} 10 Tu es un <color=#F00>Paper doctor</color> \n wahoo!
+GOTO papy
+
+#Docteur marchand
+marchanddoc:
+BROADCASTPLAYER {SCP049} 10  Tu es un <color=#F00>Marchand</color> \n tes zombies obtiennent des cartes quand il spawn!
+EXECUTESCRIPT testUpdate
+
+
+papy:
+GOTOIF peanut ({SCP106} = 0)
+#wola je voulais mettre kamp genre il peut ouvrir les portes et tout mais c'est con il passe à travers
+
+#SMALL SCP
+BROADCASTPLAYER {SCP106} 20 Global event : u smol
+SIZE {SCP106} 1 0.75 1
+
+
+peanut:
+GOTOIF dog ({SCP173} = 0)
+#TALL NUT
+
+SIZE {SCP173} 1 1.15 1
+BROADCASTPLAYER {SCP173} 10 Tu es un <color=#F00>Tall NUT</color> \nu tol\n fuck you
+
+
+
+
+
+
+
+
+dog:
+GOTOIF Fin ({SCP939} = 0)
+
+GOTOIF ultradog ({CHANCE100} > 50)
+#SpyCP
+SAVE {ultraDogIsOn} 1
+
+ultradog:
+#ultraDog
+BROADCASTPLAYER {SCP939} 10 Tu es un <color=#F00>ultra sensitive dog</color> \n tu sens des gens de plus loin \n attention au tchat de proximité (ça masque juste les infos pendant un moment)
+EXECUTESCRIPT ultraDog
+GOTO Fin
+
+
+Fin:
+STOP

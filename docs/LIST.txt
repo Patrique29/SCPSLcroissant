@@ -1,6 +1,6 @@
 !-- HELPRESPONSE
-Auto Generated At: 28 January 2024 12:08
-Expires: 28 January 2024 12:13
+Auto Generated At: 07 April 2024 15:48
+Expires: 07 April 2024 15:53
 
 List of all actions. For more information on each action, run the HELP <ACTIONNAME> action (or shelp <ACTIONNAME> in the server console).
 
@@ -28,6 +28,7 @@ MAXHP : Set the Maximum HP of the targeted players.
 HP : Set the HP of the targeted players.
 
 == Inventory Actions ==
+LOADOUT : Gives players a class loadout.
 GIVECANDY : Gives the targeted players a candy.
 CLEARINVENTORY : Clears inventory of the targeted players.
 REMOVEITEM : Removes an item from the targeted players.
@@ -39,10 +40,11 @@ RESETLIGHTCOLOR : Resets the light color in the given room.
 LIGHTSOFF : Turns all the lights off for a given period of time.
 
 == Logic Actions ==
-CALL : Moves to the provided label. When RETURN action is used, script will continue to execute from the last CALL action.
+CALL : Moves to the provided label or executes a script.
 RETURN : Moves to the last CALL action executed.
+TRIGGER : Triggers a custom event, running scripts subscribed to that event.
 GOTO : Moves to the provided label.
-GOTOIF : Reads the condition and jumps to the first provided line if the condition is TRUE, or the second provided line if the condition is FALSE.
+GOTOIF : Moves to the provided label if the condition evaluates to TRUE.
 IF : Reads the condition and stops execution of the script if the result is FALSE.
 STOP : Stops the event execution at this line, or stop a script with the specific name.
 STOPIF : Reads the condition and stops execution of the script if the result is TRUE.
@@ -50,6 +52,7 @@ STOPIF : Reads the condition and stops execution of the script if the result is 
 == Map Actions ==
 CLEANUP : Clean up items/ragdolls.
 ELEVATOR : Controls map elevators.
+GENERATORRULE : Modifies genrator behavior.
 GENERATORS : Modifies genrators.
 DECONTAMINATE : Enables, disables, or forces decontamination.
 DOOR : Controls map doors.
@@ -66,7 +69,16 @@ COMMAND : Runs a server command with full permission. Variables are supported.
 LOG : Creates a server console log. Variables are supported.
 
 == Player Actions ==
+ADVCUSTOMINFO : Sets/clears the custom info of the targeted player(s).
+BYPASS : Grants or removes bypass to specified players.
+FAKEDETONATION : Imitates the Alpha Warhead explosion, without killing anyone.
+GODMODE : Grants or removes godmode to specified players.
+KICK : Kicks specified players.
+BAN : Bans specified players.
 CUSTOMINFO : Sets/clears the custom info of the targeted player(s).
+MUTE : Mutes specified players.
+NOCLIP : Grants or removes noclip to specified players.
+SETNAME : Sets a player's name to the provided string.
 RADIORANGE : Modifies radio range settings.
 RESKIN : Sets the appearance of all players to the given role. Does NOT actually change their role -- only their appearance!
 ADVSETROLE : Sets all players to the given role with advanced settings.
@@ -79,10 +91,11 @@ EFFECT : Action for giving/removing player effects.
 SETROLE : Sets all players to the given role.
 
 == Round Actions ==
+LOBBYLOCK : Set server's lobbylock.
 ENDROUND : Ends the round.
 TICKET : Modifies tickets.
 STARTROUND : Starts the round.
-INFECTRULE : Set server's roundlock.
+ROUNDLOCK : Set server's roundlock.
 
 == Round Rule Actions ==
 DAMAGERULE : Creates a new damage rule.
@@ -96,9 +109,11 @@ INFECTRULE : Creates a new infection rule.
 SPAWNRULE : Creates a new spawn rule, modifying how players spawn at the start of the game. MUST BE USED BEFORE THE ROUND STARTS.
 
 == Variable Actions ==
+LOCALPLAYERVAR : Allows manipulation of player variables accessible in this script only..
 PLAYERDATA : Allows manipulation of variables specific to players.
+LOCAL : Saves a new variable. Saved variables can be used in THIS script only, and are reset when the round ends.
+STORE : Saves variables to long-term storage (.txt file) in the specified storage folder.
 PLAYERVAR : Allows manipulation of player variables.
-DELVARIABLE : Deletes a previously-defined variable.
 SAVE : Saves a new variable. Saved variables can be used in ANY script, and are reset when the round ends.
 
 == Yielding Actions ==

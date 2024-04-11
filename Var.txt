@@ -1,22 +1,71 @@
 
 
 
-####Global Events 
+#Global Events
 #un jour y'aura des paramètres pour ça
 
 
 
 
-###Custom roles
-##diabetique
+#Custom roles
+#all humans
+#diabetique
 #is activated (1 = true, 0 = false) (default:1)
-SAVE {GE_CR_diabetiqueIsEnable} 1
-#
+SAVE {GE_CR_Humans_isDiabetiqueActivated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Humans_nbDiabetique} 1
+
+#asthmatique
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {isAsthmatiqueActivated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Humans_nbAsthmatique} 1
+
+#Alzheimer
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {GE_CR_Humans_isRianActivated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Humans_nbRian} 1
+
+
+#Class-D
+#kid (we love this around here(no not like that))
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {GE_CR_ClassD_isEnfantActivated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_ClassD_nbEnfant} 1
+
+#Scientists
+#Zone Manager
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {GE_CR_Scientist_isZoneManagerActivated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Scientist_nbZoneManager} 1
+
+#Gamble Addict
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {GE_CR_Scientist_isGambleActivated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Scientist_nbGamble} 1
+
+
+#Guards
+#914 guards
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {GE_CR_Guard_is914Activated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Guard_nb914} 1
+
+#head of guards
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {GE_CR_Guard_isHeadActivated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Guard_nbHead} 1
 
 
 
-###System Malfunction
-##D-Class Cells explosion 
+#System Malfunction
+#D-Class Cells explosion 
 #is activated (1 = true, 0 = false) (default:1)
 SAVE {GE_SM_ClassD_isActivated} 1
 #the chance that the d-class cells' doors explodes when the systemMalfunction GE (%) (default:25)
@@ -24,7 +73,7 @@ SAVE {GE_SM_ClassD_isActivated} 1
 SAVE {GE_SM_ClassD_chanceBoom} 5
 
 
-##EarlyNuke
+#EarlyNuke
 #Is activated (1 = true, 0 = false) (default:1)
 SAVE {GE_SM_EarlyNuke_isActivated} 1
 #Can be disabled by pressing the button in HCZ (1 = true, 0 false) (default:1)
@@ -35,7 +84,7 @@ SAVE {GE_SM_EarlyNuke_minTime} 180
 SAVE {GE_SM_EarlyNuke_maxTime} 1500
 
 
-##Bugs
+#Bugs
 
 #Checkpoint bug:
 #Is activated (1 = true, 0 = false) (default:1)
