@@ -54,15 +54,15 @@ STOP
 
 randomSpawn:
 BROADCAST 10 <u>Global event :</u> Les spawns sont random bon courage
-EXECUTESCRIPT spawnAleatoire
+EXECUTESCRIPT GE_O_SpawnAleatoire
 LOG globalEvent_SpawnAleatoire
 STOP
 
 speed:
 BROADCAST 10 <u>Global event :</u> gas gas gas !
-EXECUTESCRIPT GE_O_speed
+EXECUTESCRIPT GE_O_S
 LOG globalEvent_speed
-
+STOP
 
 rien:
 BROADCAST 10 <u>Global event :</u> y'a r aujourd'hui

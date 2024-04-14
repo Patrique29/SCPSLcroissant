@@ -19,6 +19,7 @@ PLAYERDATA SET {GE_CR_ClassD_petitFils} srole petitfils
 #no custom info
 ADVSETROLE {GE_CR_ClassD_petitFils} 14 FALSE FALSE 
 RESKIN {GE_CR_ClassD_petitFils} 1
+BROADCAST 10 {SHOW:GE_CR_ClassD_petitFils:PLAYERID}
 
 BROADCASTPLAYER {GE_CR_ClassD_petitFils} 10 Tu es le <color=#EC2121>petit fils</color> de papy \ncollabore avec lui pour t'assuré la victoire \nreste caché ! personne d'autre que lui sait que tu es avec lui \ntu ne peux pas t'échappé !
 

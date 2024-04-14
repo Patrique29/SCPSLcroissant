@@ -1,0 +1,3 @@
+!--EVENT ChangingRole
+
+EFFECT GIVE {EVPLAYER} 22 100

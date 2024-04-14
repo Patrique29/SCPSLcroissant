@@ -1,9 +1,11 @@
 GOTOIF off ({CHANCE100} >= 50)
 COMMAND /setconfig friendly_fire true
+SAVE {FFrandom} 1
 LOG FFrandom_on
 STOP
 
 off: 
 COMMAND /setconfig friendly_fire false
 LOG FFrandom_off
+SAVE {FFrandom} 0
 STOP
