@@ -27,6 +27,11 @@ SAVE {GE_CR_Humans_isRianActivated} 1
 #how many people can be this role ([0;+inf[) (default:1)
 SAVE {GE_CR_Humans_nbRian} 1
 
+#Bigleu
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {Bigleu} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Humans_nbBigleu} 1
 
 #Class-D
 #kid (we love this around here(no not like that))

@@ -56,4 +56,15 @@ EXECUTESCRIPT GE_CR_Rian
 
 next3:
 
+GOTOIF next4 ({isBigleuActivated} = 0)
+PLAYERVAR SAVE {GE_CR_Humans_Bigleu} {noGlobalRoles} {GE_CR_Humans_nbBigleu}
+PLAYERDATA SET {GE_CR_Humans_Bigleu} sroleg bigleu
+BROADCASTPLAYER {GE_CR_Humans_Bigleu} 10 Romain a volé tes lunettes donc bah tu vois pas très bien !
+CUSTOMINFO SET {GE_CR_Humans_Bigleu} Bigleu
+PLAYERVAR REMOVE {noGlobalRoles} {GE_CR_Humans_Bigleu}
+
+EFFECT GIVE {GE_CR_Humans_Bigleu} 6
+
+next4:
+
 STOP
