@@ -64,7 +64,6 @@ CUSTOMINFO SET {GE_CR_Humans_Bigleu} Bigleu
 PLAYERVAR REMOVE {noGlobalRoles} {GE_CR_Humans_Bigleu}
 
 EFFECT GIVE {GE_CR_Humans_Bigleu} 6
-
 next4:
 
 STOP

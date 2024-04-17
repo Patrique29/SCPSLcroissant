@@ -1,6 +1,3 @@
-
-
-
 #Global Events
 #un jour y'aura des paramètres pour ça
 
@@ -39,6 +36,12 @@ SAVE {GE_CR_Humans_nbBigleu} 1
 SAVE {GE_CR_ClassD_isEnfantActivated} 1
 #how many people can be this role ([0;+inf[) (default:1)
 SAVE {GE_CR_ClassD_nbEnfant} 1
+
+#terroriste
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {GE_CR_ClassD_isTerroristeActivated} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_ClassD_nbTerroriste} 1
 
 #Scientists
 #Zone Manager
