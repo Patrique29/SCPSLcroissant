@@ -35,6 +35,8 @@ CUSTOMINFO SET {GE_CR_ClassD_terroriste} Terroriste Rose
 PLAYERVAR REMOVE {noRolesClassD} {GE_CR_ClassD_terroriste}
 
 GIVECANDY {GE_CR_ClassD_terroriste} 7
+SIZE {GE_CR_ClassD_terroriste} 1 1.5 1
+
 
 next3:
 
