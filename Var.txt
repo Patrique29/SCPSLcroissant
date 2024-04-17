@@ -30,6 +30,12 @@ SAVE {Bigleu} 1
 #how many people can be this role ([0;+inf[) (default:1)
 SAVE {GE_CR_Humans_nbBigleu} 1
 
+#Sectaire
+#is activated (1 = true, 0 = false) (default:1)
+SAVE {FollowLight} 1
+#how many people can be this role ([0;+inf[) (default:1)
+SAVE {GE_CR_Humans_FollowLight} 1
+
 #Class-D
 #kid (we love this around here(no not like that))
 #is activated (1 = true, 0 = false) (default:1)

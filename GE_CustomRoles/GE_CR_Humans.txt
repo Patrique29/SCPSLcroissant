@@ -66,4 +66,15 @@ PLAYERVAR REMOVE {noGlobalRoles} {GE_CR_Humans_Bigleu}
 EFFECT GIVE {GE_CR_Humans_Bigleu} 6
 next4:
 
+
+GOTOIF next5 ({isFollowLight} = 0)
+PLAYERVAR SAVE {GE_CR_Humans_FollowLight} {noGlobalRoles} {GE_CR_Humans_FollowLight}
+PLAYERDATA SET {GE_CR_Humans_FollowLight} sroleg bigleu
+BROADCASTPLAYER {GE_CR_Humans_FollowLight} 10 Mael t'as converti dans sa secte ! Follow the light ! The Light is all !
+CUSTOMINFO SET {GE_CR_Humans_FollowLight} Sectaire
+PLAYERVAR REMOVE {noGlobalRoles} {GE_CR_Humans_FollowLight}
+
+#Give l'item de la lampe !!!!
+next5:
+
 STOP
