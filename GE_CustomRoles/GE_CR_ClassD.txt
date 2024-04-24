@@ -12,6 +12,8 @@ PLAYERVAR REMOVE {noRolesClassD} {GE_CR_ClassD_enfant}
 
 SIZE {GE_CR_ClassD_enfant} 1 0.75 1
 
+GIVECANDY {GE_CR_ClassD_enfant} 1
+
 next1:
 GOTOIF next2 ({GE_CR_ClassD_isPetitFilsActivated} = 0 || {SCP106} = 0)
 PLAYERVAR SAVE {GE_CR_ClassD_petitFils} {noRolesClassD} {GE_CR_ClassD_nbPetitFils}
@@ -25,10 +27,17 @@ BROADCASTPLAYER {GE_CR_ClassD_petitFils} 10 Tu es le <color=#EC2121>petit fils</
 
 
 
-
-
-
-
 next2:
+GOTOIF next3 ({GE_CR_ClassD_isTerroristeActivated} = 0)
+PLAYER SAVE {GE_CR_ClassD_terroriste} {noRolesClassD} {GE_CR_ClassD_nbTerroriste}
+BROADCASTPLAYER {GE_CR_ClassD_terroriste} 10 Tu es un terroriste mais do not the boom !
+CUSTOMINFO SET {GE_CR_ClassD_terroriste} Terroriste Rose
+PLAYERVAR REMOVE {noRolesClassD} {GE_CR_ClassD_terroriste}
+
+GIVECANDY {GE_CR_ClassD_terroriste} 7
+SIZE {GE_CR_ClassD_terroriste} 1 1.5 1
+
+
+next3:
 
 STOP
